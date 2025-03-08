@@ -11,8 +11,8 @@ members_url = f"{BASE_URL}person"
 members_response = requests.get(members_url)
 members = members_response.json()['objects']
 
-# Step 2: Fetch voting records and sponsored bills
 for member in members:
+    print(member)
     member_name = f"{member['firstname']} {member['lastname']}"
     member_id = member['id']
 
