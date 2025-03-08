@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1386236136",accountID:"6328642",trustKey:"6328642",xpid:"UgUFWVBXChABV1RQDwMGUFEC",licenseKey:"NRJS-478cab472aef3db5069",applicationID:"1352821653"};;/*! For license information please see nr-loader-spa-1.283.2.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>g,xN:()=>p});var n=r(3333);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},l={},f="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function g(e,t){if(!e)throw new Error(f);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.283.2",i="PROD",o="CDN",a="^2.0.0-alpha.17"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=g(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9414:(e,t,r)=>{"use strict";r.d(t,{J:()=>c});var n=r(7836),i=r(2646),o=r(944),a=r(3434);const s=new Map;function c(e,t,r,c){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,o.R)(29);const u=function(e){return(e||n.ee).get("logger")}(e),d=(0,a.YM)(u),l=new i.y(n.P);l.level=c.level,l.customAttributes=c.customAttributes;const f=t[r]?.[a.Jt]||t[r];return s.set(f,l),d.inPlace(t,[r],"wrap-logger-",(()=>s.get(f))),u}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>o,ET:()=>a,TZ:()=>s,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log",s=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(8154),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},8154:(e,t,r)=>{"use strict";r.d(t,{z_:()=>o,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>a});r(6154),r(9566),r(384);const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>c,Qu:()=>u,TZ:()=>s,ih:()=>d,pP:()=>a,tC:()=>i});var n=r(860);const i=["click","keydown","submit","popstate"],o="api",a="initialPageLoad",s=n.K7.softNav,c={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},u={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},d={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>x,BR:()=>b,Kp:()=>R,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>p,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>A,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>g,rw:()=>u,tH:()=>T,uP:()=>s,wW:()=>E,xq:()=>a});var n=r(384);const i=r(860).K7.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",p="jsonpNode",g="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",R="-end",x="-body",E="cb"+R,A="jsTime",T="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},8969:(e,t,r)=>{"use strict";r.d(t,{j:()=>O});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(8154),h=r(384),p=r(6344);const g=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),w=r(3785),R=r(9414);function x(){const e=(0,h.pV)();g.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const E={};var A=r(9417),T=r(5603),N=r(5284);const S=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function O(e,t={},g,O){let{init:I,info:P,loader_config:j,runtime:C={},exposed:k=!0}=t;C.loaderType=g;const L=(0,h.pV)();P||(I=L.init,P=L.info,j=L.loader_config),(0,A.xN)(e.agentIdentifier,I||{}),(0,T.a)(e.agentIdentifier,j||{}),P.jsAttributes??={},d.bv&&(P.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,P);const H=(0,A.D0)(e.agentIdentifier),M=[P.beacon,P.errorBeacon];_||(H.proxy.assets&&(S(H.proxy.assets),M.push(H.proxy.assets)),H.proxy.beacon&&M.push(H.proxy.beacon),x(),(0,h.US)("activatedFeatures",N.B),e.runSoftNavOverSpa&&=!0===H.soft_navigations.enabled&&H.feature_flags.includes("soft_nav")),C.denyList=[...H.ajax.deny_list||[],...H.ajax.block_internal?M:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const g={};var x=s.ee.get(e),A=x.get("tracer");E[e]=b.g.OFF,x.on(p.G4.REPLAY_RUNNING,(t=>{E[e]=t}));var T="api-",N=T+"ixn-";function S(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),I(T,n,!0,o||null===r?"session":void 0)(t,r)}function _(){}g.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,x),(0,w.R)(x,e,t,r)},g.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,x),(0,R.J)(x,e,t,{customAttributes:r,level:i})},m.forEach((e=>{g[e]=I(T,e,!0,"api")})),g.addPageAction=I(T,"addPageAction",!0,n.K7.genericEvents),g.recordCustomEvent=I(T,"recordCustomEvent",!0,n.K7.genericEvents),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,I(T,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return S(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},g.setUserId=function(e){if("string"==typeof e||null===e)return S("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return S("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},g.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,x),x.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},g[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.RECORD,[],void 0,n.K7.sessionReplay,x)},g[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.PAUSE,[],void 0,n.K7.sessionReplay,x)},g.interaction=function(e){return(new _).get("object"==typeof e?e:{})};const O=_.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,x),h||(0,a.p)(N+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,x),function(){if(A.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.t)()],r)}}}};function I(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,x),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,x),r?void 0:this}}function P(){r.e(478).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),x.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{O[e]=I(N,e,void 0,h?n.K7.softNav:n.K7.spa)})),g.setCurrentRouteName=h?I(N,"routeName",void 0,n.K7.softNav):I(T,"routeName",!0,n.K7.spa),g.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,x),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!E[e]],void 0,n.K7.jserrors,x)},d.RI?(0,u.GG)((()=>P()),!0):P(),g}(e.agentIdentifier,O,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.283.2.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.283.2.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-2oN05BjxuObKuOX8E0vq/zS51M+2HokmNPBRUrIC1fw3hpJqoI18/nckSFiqV11KxT7ag3C+FunKrR8n0PD9Ig==",249:"sha512-Zs5nIHr/khH6G8IhAEdnngg+P7y/IfmjU0PQmXABpCEtSTeKV22OYdaa9lENrW9uxI0lZ6O5e5dCnEMsTS0onA==",212:"sha512-LPKde7A1ZxIHzoSqWKxn5uWVhM9u76Vtmp9DMBf+Ry3mnn2jpsfyfigMYD5Yka2RG3NeIBqOwNYuPrWL39qn6w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.283.2.PROD"]=self["webpackChunk:NRBA-1.283.2.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(8969);var l=i(1687),f=i(4234),h=i(5289),p=i(6154),g=i(5270),m=i(7767),v=i(6389);class b extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,l.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,l.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,m.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,l.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,l.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};p.RI?(0,h.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,g.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var R=i(384);var x=i(9908),E=i(2843),A=i(3878),T=i(782),N=i(1863);class S extends b{static featureName=T.T;constructor(e,t=!0){super(e,T.T,t),p.RI&&((0,E.u)((()=>(0,x.p)("docHidden",[(0,N.t)()],void 0,T.T,this.ee)),!0),(0,A.sp)("pagehide",(()=>(0,x.p)("winPagehide",[(0,N.t)()],void 0,T.T,this.ee))),this.importAggregator(e))}}var _=i(8154);class O extends b{static featureName=_.TZ;constructor(e,t=!0){super(e,_.TZ,t),this.importAggregator(e)}}var I=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return H(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection";if(!e?.reason)return;if(H(e.reason))try{return e.reason.message=t+": "+e.reason.message,C(e.reason)}catch(t){return C(e.reason)}const r=C(e.reason);return r.message=t+": "+r?.message,r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return H(e.error)?e.error:C(e)}function H(e){return e instanceof Error&&!!e.stack}class M extends b{static featureName=I.T;#r=!1;constructor(e,r=!0){super(e,I.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,x.p)("ierr",[C(e),(0,N.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),p.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,x.p)("err",[k(e),(0,N.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),p.gm.addEventListener("error",(e=>{this.abortHandler&&(0,x.p)("err",[L(e),(0,N.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var D=i(8990);let K=1;const U="nr@id";function V(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===p.gm?0:(0,D.I)(e,U,(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var F=i(8139),B=i(7836),W=i(3434);const z={},q=["open","send"];function Z(t){var r=t||B.ee;const n=function(e){return(e||B.ee).get("xhr")}(r);if(void 0===p.gm.XMLHttpRequest)return n;if(z[n.debugId]++)return n;z[n.debugId]=1,(0,F.u)(r);var i=(0,W.YM)(n),o=p.gm.XMLHttpRequest,a=p.gm.MutationObserver,s=p.gm.Promise,c=p.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=p.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,A.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,q,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(g?g.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var g=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Y="fetch-",J=Y+"body-",X=["arrayBuffer","blob","json","text","formData"],Q=p.gm.Request,ee=p.gm.Response,te="prototype";const re={};function ne(e){const t=function(e){return(e||B.ee).get("fetch")}(e);if(!(Q&&ee&&p.gm.fetch))return t;if(re[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[B.P]&&o[B.P].dt&&(e=o[B.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return re[t.debugId]=1,X.forEach((e=>{r(Q[te],e,J),r(ee[te],e,J)})),r(p.gm,"fetch",Y),t.on(Y+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Y+"done",[null,r],n)}else t.emit(Y+"done",[e],n)})),t}var ie=i(7485),oe=i(5603);class ae{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,oe.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof p.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ie.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var se=i(9300),ce=i(7295),ue=["load","error","abort","timeout"],de=ue.length,le=(0,R.dV)().o.REQ,fe=(0,R.dV)().o.XHR;class he extends b{static featureName=se.T;constructor(e,t=!0){super(e,se.T,t),this.dt=new ae(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,x.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};p.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};pe(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}ne(this.ee),Z(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=R,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){E(t,e)}),(0,A.jT)(!1)),p.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,A.jT)(!1))}function o(e){this.params={method:e[0]},pe(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,N.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<de;s++)r.addEventListener(ue[s],this.listener,(0,A.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+V(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+V(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,N.t)()}function h(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function g(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof fe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,N.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,N.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&p.RI&&(t=""+p.gm.location.href):e[0]&&e[0].url?t=e[0].url:p.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ie.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,N.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof le?r=i.url:p.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),pe(this,r);var o=(""+(i&&i instanceof le&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function w(e,t){if(this.endTime=(0,N.t)(),this.params||(this.params={}),(0,ce.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,N.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function R(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<de;t++)e.removeEventListener(ue[t],this.listener,!1);t.aborted||(0,ce.iW)(t)||(n.duration=(0,N.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):E(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function E(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,x.p)(_.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",h),t.on("removeEventListener-end",g),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function pe(e,t){var r=(0,ie.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ge={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||B.ee).get("history")}(e);return!p.RI||ge[t.debugId]++||(ge[t.debugId]=1,(0,W.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:we,d3:Re,Kp:xe,TZ:Ee,Lc:Ae,uP:Te,Rz:Ne}=be;class Se extends b{static featureName=Ee;constructor(e,t=!0){super(e,Ee,t);if(!(0,m.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,F.u)(r),this.eventsEE.on(Te,(function(e,t){this.bstStart=(0,N.t)()})),this.eventsEE.on(Ae,(function(e,t){(0,x.p)("bst",[e[0],t,this.bstStart,(0,N.t)()],void 0,a.K7.sessionTrace,r)})),r.on(Ne+Re,(function(e){this.time=(0,N.t)(),this.startPath=location.pathname+location.hash})),r.on(Ne+xe,(function(e){(0,x.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,x.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:we,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var _e=i(2614);class Oe extends b{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(_e.H3,"_").concat(_e.uh)))}catch(e){}(0,g.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,x.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===_e.g.FULL||e.sessionReplayMode===_e.g.ERROR)||(0,g.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==_e.g.FULL&&this.featAggregate.initializeRecording(_e.g.FULL,!0):(this.#i=_e.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==_e.g.FULL&&(this.recorder.parent.mode=_e.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ie=i(3962);class Pe extends b{static featureName=Ie.TZ;constructor(e,t=!0){if(super(e,Ie.TZ,t),!p.RI||!(0,R.dV)().o.MO)return;const r=ve(this.ee);Ie.tC.forEach((e=>{(0,A.sp)(e,(e=>{a(e)}),!0)}));const n=()=>(0,x.p)("newURL",[(0,N.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n);try{this.removeOnAbort=new AbortController}catch(e){}(0,A.sp)("popstate",(e=>(0,x.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let i=!1;const o=new((0,R.dV)().o.MO)(((e,t)=>{i||(i=!0,requestAnimationFrame((()=>{(0,x.p)("newDom",[(0,N.t)()],void 0,this.featureName,this.ee),i=!1})))})),a=(0,v.s)((e=>{(0,x.p)("newUIEvent",[e],void 0,this.featureName,this.ee),o.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),o.disconnect(),this.abortHandler=void 0},this.importAggregator(e,{domObserver:o})}}var je=i(7378);const Ce={},ke=["appendChild","insertBefore","replaceChild"];function Le(e){const t=function(e){return(e||B.ee).get("jsonp")}(e);if(!p.RI||Ce[t.debugId])return t;Ce[t.debugId]=!0;var r=(0,W.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,ke,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,A.jT)(!1)),e.addEventListener("error",f,(0,A.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const He={};function Me(e){const t=function(e){return(e||B.ee).get("promise")}(e);if(He[t.debugId])return t;He[t.debugId]=!0;var r=t.context,n=(0,W.YM)(t),i=p.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}p.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[W.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const De={},Ke="setTimeout",Ue="setInterval",Ve="clearTimeout",Ge="-start",Fe=[Ke,"setImmediate",Ue,Ve,"clearImmediate"];function Be(e){const t=function(e){return(e||B.ee).get("timer")}(e);if(De[t.debugId]++)return t;De[t.debugId]=1;var r=(0,W.YM)(t);return r.inPlace(p.gm,Fe.slice(0,2),Ke+"-"),r.inPlace(p.gm,Fe.slice(2,3),Ue+"-"),r.inPlace(p.gm,Fe.slice(3),Ve+"-"),t.on(Ue+Ge,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ke+Ge,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const We={};function ze(e){const t=function(e){return(e||B.ee).get("mutation")}(e);if(!p.RI||We[t.debugId])return t;We[t.debugId]=!0;var r=(0,W.YM)(t),n=p.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:qe,d3:Ze,Kp:Ye,$p:Je,wW:Xe,e5:$e,tH:Qe,uP:et,rw:tt,Lc:rt}=je;class nt extends b{static featureName=qe;constructor(e,t=!0){if(super(e,qe,t),!p.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let r,n=0;const i=this.ee.get("tracer"),o=Le(this.ee),a=Me(this.ee),s=Be(this.ee),c=Z(this.ee),u=this.ee.get("events"),d=ne(this.ee),l=ve(this.ee),f=ze(this.ee);function h(e,t){l.emit("newURL",[""+window.location,t])}function g(){n++,r=window.location.hash,this[et]=(0,N.t)()}function m(){n--,window.location.hash!==r&&h(0,!0);var e=(0,N.t)();this[$e]=~~this[$e]+e-this[et],this[rt]=e}function v(e,t){e.on(t,(function(){this[t]=(0,N.t)()}))}this.ee.on(et,g),a.on(tt,g),o.on(tt,g),this.ee.on(rt,m),a.on(Xe,m),o.on(Xe,m),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e.agentIdentifier]||(0,x.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([et,rt,"xhr-resolved"],this.featureName),u.buffer([et],this.featureName),s.buffer(["setTimeout"+Ye,"clearTimeout"+Ze,et],this.featureName),c.buffer([et,"new-xhr","send-xhr"+Ze],this.featureName),d.buffer([Qe+Ze,Qe+"-done",Qe+Je+Ze,Qe+Je+Ye],this.featureName),l.buffer(["newURL"],this.featureName),f.buffer([et],this.featureName),a.buffer(["propagate",tt,Xe,"executor-err","resolve"+Ze],this.featureName),i.buffer([et,"no-"+et],this.featureName),o.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),v(d,Qe+Ze),v(d,Qe+"-done"),v(o,"new-jsonp"),v(o,"jsonp-end"),v(o,"cb-start"),l.on("pushState-end",h),l.on("replaceState-end",h),window.addEventListener("hashchange",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){h(0,n>1)}),(0,A.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var it=i(3333);class ot extends b{static featureName=it.TZ;constructor(e,t=!0){super(e,it.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(p.RI&&(e.init.user_actions.enabled&&(it.Zp.forEach((e=>(0,A.sp)(e,(e=>(0,x.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),it.qN.forEach((e=>{const t=(0,v.s)((e=>{(0,x.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,A.sp)(e,t)}))),e.init.performance.resources.enabled&&p.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,x.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var at=i(993),st=i(3785),ct=i(9414);class ut extends b{static featureName=at.TZ;constructor(e,t=!0){super(e,at.TZ,t);const r=this.ee;(0,ct.J)(r,p.gm.console,"log",{level:"info"}),(0,ct.J)(r,p.gm.console,"error",{level:"error"}),(0,ct.J)(r,p.gm.console,"warn",{level:"warn"}),(0,ct.J)(r,p.gm.console,"info",{level:"info"}),(0,ct.J)(r,p.gm.console,"debug",{level:"debug"}),(0,ct.J)(r,p.gm.console,"trace",{level:"trace"}),this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,st.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),p.gm?(this.features={},(0,R.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,R.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[he,w,S,Se,Oe,O,M,ot,ut,Pe,nt],loaderType:"spa"})})()})();</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<meta name="description" content="9:00 P.M. EST &nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Hello, everybody.&nbsp; Hello. &nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; Hello." />
+	<link rel="canonical" href="https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Press Gaggle by President Trump Aboard Air Force One En Route Joint Base Andrews" />
+	<meta property="og:description" content="9:00 P.M. EST &nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Hello, everybody.&nbsp; Hello. &nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; Hello." />
+	<meta property="og:url" content="https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/" />
+	<meta property="og:site_name" content="The White House" />
+	<meta property="article:publisher" content="https://www.facebook.com/WhiteHouse/" />
+	<meta property="article:published_time" content="2025-02-19T21:34:27+00:00" />
+	<meta property="article:modified_time" content="2025-02-20T21:36:38+00:00" />
+	<meta property="og:image" content="https://www.whitehouse.gov/wp-content/uploads/2025/01/WH47-Social-Share-Card-Navy-1200x628-1.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="628" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@whitehouse" />
+	<meta name="twitter:site" content="@whitehouse" />
+	<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/#article","isPartOf":{"@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/"},"headline":"Press Gaggle by President Trump Aboard Air Force One En Route Joint Base Andrews","datePublished":"2025-02-19T21:34:27+00:00","dateModified":"2025-02-20T21:36:38+00:00","mainEntityOfPage":{"@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/"},"wordCount":3736,"publisher":{"@id":"https://www.whitehouse.gov/#organization"},"articleSection":["Remarks"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/","url":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/","name":"Press Gaggle by President Trump Aboard Air Force One En Route Joint Base Andrews &#8211; The White House","isPartOf":{"@id":"https://www.whitehouse.gov/#website"},"datePublished":"2025-02-19T21:34:27+00:00","dateModified":"2025-02-20T21:36:38+00:00","description":"9:00 P.M. EST &nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Hello, everybody.&nbsp; Hello. &nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; Hello.","breadcrumb":{"@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/"]}]},{"@type":"BreadcrumbList","@id":"https://www.whitehouse.gov/remarks/2025/02/press-gaggle-by-president-trump-aboard-air-force-one-en-route-joint-base-andrews/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.whitehouse.gov/"},{"@type":"ListItem","position":2,"name":"News","item":"https://www.whitehouse.gov/news/"},{"@type":"ListItem","position":3,"name":"Remarks","item":"https://www.whitehouse.gov/remarks/"},{"@type":"ListItem","position":4,"name":"Press Gaggle by President Trump Aboard Air Force One En Route Joint Base Andrews"}]},{"@type":"WebSite","@id":"https://www.whitehouse.gov/#website","url":"https://www.whitehouse.gov/","name":"The White House","description":"","publisher":{"@id":"https://www.whitehouse.gov/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.whitehouse.gov/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.whitehouse.gov/#organization","name":"The White House","url":"https://www.whitehouse.gov/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.whitehouse.gov/#/schema/logo/image/","url":"https://www.whitehouse.gov/wp-content/uploads/2025/01/favicon.png","contentUrl":"https://www.whitehouse.gov/wp-content/uploads/2025/01/favicon.png","width":918,"height":918,"caption":"The White House"},"image":{"@id":"https://www.whitehouse.gov/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/WhiteHouse/","https://x.com/whitehouse","https://www.instagram.com/whitehouse/","https://www.youtube.com/@whitehouse"]}]}</script>
+
+
+<title>Press Gaggle by President Trump Aboard Air Force One En Route Joint Base Andrews &#8211; The White House</title>
+<style id='core/social-link-inline-css'>
+.wp-block-social-link{background:none!important;color:inherit!important}.wp-block-social-link-anchor{padding:0!important}.wp-block-social-link:focus,.wp-block-social-link:hover{transform:none!important}
+
+</style>
+<link rel='stylesheet' id='all-css-4' href='https://www.whitehouse.gov/wp-includes/blocks/social-links/style.min.css?m=1739294329g' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-6' href='https://www.whitehouse.gov/wp-content/themes/whitehouse/blocks/header/style-index.css?m=1741297144g' type='text/css' media='all' />
+<style id='wp-block-post-date-inline-css'>
+.wp-block-post-date{box-sizing:border-box}
+</style>
+<style id='whitehouse-topper-style-inline-css'>
+.wp-block-whitehouse-topper{--wh-topper--padding-top:var(--wp--preset--spacing--64);--wh-topper--padding-bottom:var(--wp--preset--spacing--48);--wh-topper--media-offset:0px;--wh-topper--content-offset:var(--wp--preset--spacing--80);background-color:var(--wh--topper--background-color);background-image:var(--wp--preset--gradient--topper);color:var(--wh--topper--color);padding:var(--wh-topper--padding-top) var(--wp--style--root--padding-right) var(--wh-topper--padding-bottom) var(--wp--style--root--padding-left)}.wp-block-whitehouse-topper__inner-container{margin-inline:auto;max-width:var(--wp--style--global--content-size);width:100%}.wp-block-whitehouse-topper,:root :where(.is-layout-constrained)>.wp-block-whitehouse-topper{margin-block-end:80px}.wp-block-whitehouse-topper.has-media{--wh-topper--media-offset:var(--wp--preset--spacing--48);margin-block-end:calc(var(--wh-topper--content-offset) + var(--wh-topper--media-offset))}.has-wide-width .wp-block-whitehouse-topper__inner-container{max-width:var(--wp--style--global--xlarge-size)}.wp-block-whitehouse-topper__content{display:grid;grid-template-columns:[seal-start eyebrow-start headline-start deck-start media-start] 1fr [seal-end eyebrow-end headline-end deck-end media-end];grid-template-rows:[seal-start] auto [seal-end eyebrow-start] auto [eyebrow-end headline-start] auto [headline-end deck-start] auto [deck-end media-start] auto [media-end];justify-content:center;text-align:center}.is-style-bio-media .wp-block-whitehouse-topper__content{grid-template-rows:[seal-start] auto [seal-end eyebrow-start] auto [eyebrow-end media-start] auto [media-end headline-start] auto [headline-end deck-start] auto [deck-end]}.wp-block-whitehouse-topper__content>*{min-width:0}.wp-block-whitehouse-topper__seal{grid-area:seal;margin-block-end:var(--wp--preset--spacing--20)}@media screen and (max-width:439px){.wp-block-whitehouse-topper__seal{--wh--topper--seal--height:clamp(4.3182rem,21.59vw + 0rem,5.9375rem)}}@media screen and (min-width:440px){.wp-block-whitehouse-topper__seal{--wh--topper--seal--height:5.9375rem}}@media screen and (min-width:1440px){.wp-block-whitehouse-topper__seal{--wh--topper--seal--height:clamp(5.9375rem,3.3vw + 2.9688rem,6.9271rem)}}.wp-block-whitehouse-topper__seal svg{height:var(--wh--topper--seal--height);width:auto}.wp-block-whitehouse-topper__eyebrow{font-family:var(--wp--custom--typography--heading-6--font-family);font-size:var(--wp--custom--typography--heading-6--font-size);font-weight:var(--wp--custom--typography--heading-6--font-weight);grid-area:eyebrow;letter-spacing:var(--wp--custom--typography--heading-6--letter-spacing);line-height:var(--wp--custom--typography--heading-6--line-height);margin-block:0;text-transform:var(--wp--custom--typography--heading-6--text-transform)}.wp-block-whitehouse-topper__eyebrow a{align-items:flex-start;display:inline-flex;gap:.5em;margin-inline:.5em;padding:.35em 1.2em;text-align:left;text-decoration:none}.wp-block-whitehouse-topper__eyebrow--icon{height:1em;line-height:inherit;order:-1}.wp-block-whitehouse-topper__eyebrow--icon path{opacity:.5;transition:allow-discrete .125s ease-in-out 0s}a:hover .wp-block-whitehouse-topper__eyebrow--icon path{opacity:1}.wp-block-whitehouse-topper__eyebrow+.wp-block-whitehouse-topper__headline{margin-block-start:var(--wp--preset--spacing--16)}.wp-block-whitehouse-topper__headline{font-size:var(--wp--custom--typography--topper-large--font-size);grid-area:headline;margin-block:0}.post-type-post .wp-block-whitehouse-topper__headline,.single-post .wp-block-whitehouse-topper__headline{font-size:var(--wp--custom--typography--topper-small--font-size)}.has-allcaps-headline .wp-block-whitehouse-topper__headline{text-transform:uppercase}.wp-block-whitehouse-topper__headline+.wp-block-whitehouse-topper__deck{margin-block-start:var(--wp--preset--spacing--16)}.wp-block-whitehouse-topper__deck{grid-area:deck;margin-block:var(--wp--preset--spacing--16) 0}.wp-block-whitehouse-topper__deck p:empty{display:none}.wp-block-whitehouse-topper__meta{display:flex;flex-direction:column;font-family:var(--wp--custom--typography--small--font-family);font-size:var(--wp--custom--typography--small--font-size);font-weight:var(--wp--custom--typography--small--font-weight);gap:var(--wp--preset--spacing--20);grid-area:deck;letter-spacing:var(--wp--custom--typography--small--letter-spacing);line-height:var(--wp--custom--typography--small--line-height);margin-block:var(--wp--preset--spacing--40) 0;text-transform:var(--wp--custom--typography--small--text-transform)}@media screen and (min-width:600px){.wp-block-whitehouse-topper__meta{align-items:center;flex-direction:row;gap:0;justify-content:center}}.wp-block-whitehouse-topper__meta a{text-decoration:none}.wp-block-whitehouse-topper__meta a:focus-visible,.wp-block-whitehouse-topper__meta a:hover{text-decoration:underline}@media screen and (min-width:600px){.wp-block-whitehouse-topper__meta>*{padding-inline:var(--wp--preset--spacing--20)}.wp-block-whitehouse-topper__meta>:not(:first-child){border-left:1px solid hsl(from var(--wh--topper--color) h s l/.4)}}.wp-block-whitehouse-topper__media{grid-area:media;margin-block-end:calc((var(--wh-topper--padding-bottom) + var(--wh-topper--media-offset))*-1);margin-block-start:var(--wp--preset--spacing--40);position:relative;z-index:5}.is-style-bio-media .wp-block-whitehouse-topper__media{margin-block:var(--wp--preset--spacing--24)}.wp-block-whitehouse-topper__media--figure{margin:0;text-align:center}.is-style-bio-media .wp-block-whitehouse-topper__media--asset{aspect-ratio:1/1;border-radius:50%;height:var(--wh-topper--bio-media--size);-o-object-fit:cover;object-fit:cover;vertical-align:middle;width:var(--wh-topper--bio-media--size)}@media screen and (max-width:439px){.is-style-bio-media .wp-block-whitehouse-topper__media--asset{--wh-topper--bio-media--size:clamp(18.6364rem,93.18vw + 0rem,25.625rem)}}@media screen and (min-width:440px){.is-style-bio-media .wp-block-whitehouse-topper__media--asset{--wh-topper--bio-media--size:25.625rem}}@media screen and (min-width:1440px){.is-style-bio-media .wp-block-whitehouse-topper__media--asset{--wh-topper--bio-media--size:clamp(25.625rem,14.24vw + 12.8125rem,29.8958rem)}}.wp-block-whitehouse-topper__media--asset,.wp-block-whitehouse-topper__media--video{height:auto;max-width:100%}.wp-block-whitehouse-topper__navigation{font-family:var(--wp--custom--typography--small-caps--font-family);font-size:var(--wp--custom--typography--small-caps--font-size);font-size:var(--wh--topper--navigation--font-size);font-weight:var(--wp--custom--typography--small-caps--font-weight);font-weight:600;letter-spacing:var(--wp--custom--typography--small-caps--letter-spacing);letter-spacing:.07em;line-height:var(--wp--custom--typography--small-caps--line-height);margin-block-start:var(--wp--preset--spacing--20);text-transform:var(--wp--custom--typography--small-caps--text-transform)}.wp-block-whitehouse-topper__navigation.is-layout-flex{-moz-column-gap:var(--wp--preset--spacing--48);column-gap:var(--wp--preset--spacing--48);row-gap:var(--wp--preset--spacing--20);--wh--topper--navigation--justify-content-default:center;--wh--topper--navigation--justify-content-overflow:var(--can-scroll) flex-start;justify-content:var(--wh--topper--navigation--justify-content-overflow,var(--wh--topper--navigation--justify-content-default))}@media screen and (max-width:781px){.wp-block-whitehouse-topper__navigation.is-layout-flex:not(.is-nowrap){flex-direction:column}}@media screen and (max-width:439px){.wp-block-whitehouse-topper__navigation{--wh--topper--navigation--font-size:clamp(0.6364rem,3.18vw + 0rem,0.875rem)}}@media screen and (min-width:440px){.wp-block-whitehouse-topper__navigation{--wh--topper--navigation--font-size:.875rem}}@media screen and (min-width:1440px){.wp-block-whitehouse-topper__navigation{--wh--topper--navigation--font-size:clamp(0.875rem,0.49vw + 0.4375rem,1.0208rem)}}.wp-block-whitehouse-topper__navigation a{opacity:.42;text-decoration:none}.wp-block-whitehouse-topper__navigation a.is-current,.wp-block-whitehouse-topper__navigation a:focus-visible,.wp-block-whitehouse-topper__navigation a:hover{opacity:1}
+
+</style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+</style>
+<style id='wp-block-post-content-inline-css'>
+.wp-block-post-content{display:flow-root}
+</style>
+<style id='wp-block-group-inline-css'>
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+</style>
+<style id='core/group-inline-css'>
+.wp-block-group.has-hyperlink{position:relative}.wp-block-group.has-hyperlink:not(.block-editor-block-list__block)>:nth-child(2){margin-block-start:0}.wp-block-group.has-hyperlink a.wp-block-group__action{height:100%;left:0;position:absolute;top:0;width:100%;z-index:3}.wp-block-group.has-hyperlink .wp-block-button,.wp-block-group.has-hyperlink a{position:relative;z-index:4}
+
+</style>
+<link rel='stylesheet' id='all-css-20' href='https://www.whitehouse.gov/wp-content/themes/whitehouse/blocks/footer/style-index.css?m=1741377059g' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color)}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--charcoal: #293340;--wp--preset--color--deep-navy-blue: #0D132D;--wp--preset--color--navy-blue: #030A1B;--wp--preset--color--navy-accent: #141F4D;--wp--preset--color--zodiac-blue: #0B1B33;--wp--preset--color--vivid-cyan: #0DCBFF;--wp--preset--color--deep-red: #730000;--wp--preset--color--red: #B50000;--wp--preset--color--gray: #8A8A8A;--wp--preset--color--pale-gray: #D9DEE8;--wp--preset--color--stone: #E8E6E0;--wp--preset--color--light-gray: #F3F3F3;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--blue: linear-gradient(180deg, var(--wp--preset--color--navy-blue) 0%, var(--wp--preset--color--blue) 100%);--wp--preset--gradient--blue-alt: linear-gradient(321deg, var(--wp--preset--color--navy-accent) 7.41%, #12347F 80.62%);--wp--preset--gradient--topper: linear-gradient(0deg, var(--wp--preset--color--deep-navy-blue) 24.28%, var(--wp--preset--color--zodiac-blue) 100%);--wp--preset--font-size--small: var(--wp--custom--typography--small--font-size);--wp--preset--font-size--medium: var(--wp--custom--typography--medium--font-size);--wp--preset--font-size--large: var(--wp--custom--typography--large--font-size);--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--small-caps: var(--wp--custom--typography--small-caps--font-size);--wp--preset--font-size--intermediate: var(--wp--custom--typography--intermediate--font-size);--wp--preset--font-size--regular: var(--wp--custom--typography--body--font-size);--wp--preset--font-size--display: var(--wp--custom--typography--display--font-size);--wp--preset--font-size--heading-1: var(--wp--custom--typography--heading-1--font-size);--wp--preset--font-size--heading-2: var(--wp--custom--typography--heading-2--font-size);--wp--preset--font-size--heading-3: var(--wp--custom--typography--heading-3--font-size);--wp--preset--font-size--heading-4: var(--wp--custom--typography--heading-4--font-size);--wp--preset--font-size--heading-5: var(--wp--custom--typography--heading-5--font-size);--wp--preset--font-size--heading-6: var(--wp--custom--typography--heading-6--font-size);--wp--preset--font-family--instrument-sans: "Instrument Sans", sans-serif;--wp--preset--font-family--instrument-serif: "Instrument Serif", serif;--wp--preset--spacing--20: 20px;--wp--preset--spacing--30: 30px;--wp--preset--spacing--40: clamp(2rem, 0.352rem + 4.396vw, 2.5rem);--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--4: 4px;--wp--preset--spacing--8: 8px;--wp--preset--spacing--10: 10px;--wp--preset--spacing--12: 12px;--wp--preset--spacing--15: 15px;--wp--preset--spacing--16: 16px;--wp--preset--spacing--24: 24px;--wp--preset--spacing--32: 32px;--wp--preset--spacing--36: 36px;--wp--preset--spacing--48: clamp(2.5rem, 0.852rem + 4.396vw, 3rem);--wp--preset--spacing--56: clamp(2.75rem, 0.277rem + 6.593vw, 3.5rem);--wp--preset--spacing--64: clamp(3rem, -0.297rem + 8.791vw, 4rem);--wp--preset--spacing--72: clamp(3.25rem, -0.871rem + 10.989vw, 4.5rem);--wp--preset--spacing--100: clamp(4rem, -3.418rem + 19.78vw, 6.25rem);--wp--preset--spacing--120: clamp(4.5rem, -5.39rem + 26.374vw, 7.5rem);--wp--preset--spacing--150: clamp(5.375rem, -7.812rem + 35.165vw, 9.375rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);--wp--custom--typography--font-family--sans-serif: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--font-family--serif: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--small-caps--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--small-caps--font-weight: 400;--wp--custom--typography--small-caps--font-size: 12px;--wp--custom--typography--small-caps--line-height: 1.25;--wp--custom--typography--small-caps--letter-spacing: 0px;--wp--custom--typography--small-caps--text-transform: uppercase;--wp--custom--typography--small--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--small--font-weight: 400;--wp--custom--typography--small--font-size: 14px;--wp--custom--typography--small--line-height: 1.6;--wp--custom--typography--small--letter-spacing: 0px;--wp--custom--typography--small--text-transform: none;--wp--custom--typography--medium--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--medium--font-weight: 400;--wp--custom--typography--medium--font-size: 16px;--wp--custom--typography--medium--line-height: 1.6;--wp--custom--typography--medium--letter-spacing: 0px;--wp--custom--typography--medium--text-transform: none;--wp--custom--typography--intermediate--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--intermediate--font-weight: 400;--wp--custom--typography--intermediate--font-size: 17px;--wp--custom--typography--intermediate--line-height: 1.6;--wp--custom--typography--intermediate--letter-spacing: 0px;--wp--custom--typography--intermediate--text-transform: none;--wp--custom--typography--body--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--body--font-weight: 400;--wp--custom--typography--body--font-size: 18px;--wp--custom--typography--body--line-height: 1.6;--wp--custom--typography--body--letter-spacing: 0.2px;--wp--custom--typography--body--text-transform: none;--wp--custom--typography--large--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--large--font-weight: 400;--wp--custom--typography--large--font-size: 21px;--wp--custom--typography--large--line-height: 1.6;--wp--custom--typography--large--letter-spacing: 0.2px;--wp--custom--typography--large--text-transform: none;--wp--custom--typography--display--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--display--font-weight: 400;--wp--custom--typography--display--font-size: 152px;--wp--custom--typography--display--line-height: 1.18;--wp--custom--typography--display--text-transform: uppercase;--wp--custom--typography--display--letter-spacing: 3.64;--wp--custom--typography--heading-1--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--heading-1--font-weight: 400;--wp--custom--typography--heading-1--font-size: 54px;--wp--custom--typography--heading-1--line-height: 1.08;--wp--custom--typography--heading-1--letter-spacing: 1.2px;--wp--custom--typography--heading-1--text-transform: none;--wp--custom--typography--heading-2--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--heading-2--font-weight: 400;--wp--custom--typography--heading-2--font-size: 38px;--wp--custom--typography--heading-2--line-height: 1.18;--wp--custom--typography--heading-2--letter-spacing: 0.76px;--wp--custom--typography--heading-2--text-transform: none;--wp--custom--typography--heading-3--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--heading-3--font-weight: 400;--wp--custom--typography--heading-3--font-size: 28px;--wp--custom--typography--heading-3--line-height: 1.18;--wp--custom--typography--heading-3--letter-spacing: 0.56px;--wp--custom--typography--heading-3--text-transform: none;--wp--custom--typography--heading-4--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--heading-4--font-weight: 400;--wp--custom--typography--heading-4--font-size: 24px;--wp--custom--typography--heading-4--line-height: 1.18;--wp--custom--typography--heading-4--letter-spacing: 0.48px;--wp--custom--typography--heading-4--text-transform: none;--wp--custom--typography--heading-5--font-family: var(--wp--preset--font-family--instrument-serif);--wp--custom--typography--heading-5--font-weight: 400;--wp--custom--typography--heading-5--font-size: 20px;--wp--custom--typography--heading-5--line-height: 1.18;--wp--custom--typography--heading-5--letter-spacing: 0.4px;--wp--custom--typography--heading-5--text-transform: none;--wp--custom--typography--heading-6--font-family: var(--wp--preset--font-family--instrument-sans);--wp--custom--typography--heading-6--font-weight: 600;--wp--custom--typography--heading-6--font-size: 14px;--wp--custom--typography--heading-6--line-height: 1.18;--wp--custom--typography--heading-6--letter-spacing: 0.84px;--wp--custom--typography--heading-6--text-transform: uppercase;}.wp-block-button .wp-block-button__link{--wp--preset--color--charcoal: #293340;--wp--preset--color--pale-gray: #D9DEE8;--wp--preset--color--light-gray: #F3F3F3;--wp--preset--color--white: #FFFFFF;}:root { --wp--style--global--content-size: 782px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: var(--wp--custom--style--block-gap); margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: var(--wp--custom--style--block-gap); }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: var(--wp--custom--style--block-gap);margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: var(--wp--custom--style--block-gap);margin-block-end: 0;}:root :where(.is-layout-flex){gap: var(--wp--custom--style--block-gap);}:root :where(.is-layout-grid){gap: var(--wp--custom--style--block-gap);}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{background-color: var(--wp--preset--color--white);color: var(--wp--preset--color--charcoal);font-family: var(--wp--custom--typography--body--font-family);font-size: var(--wp--custom--typography--body--font-size);font-weight: var(--wp--custom--typography--body--font-weight);letter-spacing: var(--wp--custom--typography--body--letter-spacing);line-height: var(--wp--custom--typography--body--line-height);--wp--style--root--padding-top: var(--wp--custom--style--root--padding-top);--wp--style--root--padding-right: var(--wp--custom--style--root--padding-right);--wp--style--root--padding-bottom: var(--wp--custom--style--root--padding-bottom);--wp--style--root--padding-left: var(--wp--custom--style--root--padding-left);text-transform: var(--wp--custom--typography--body--text-transform);}a:where(:not(.wp-element-button)){color: inherit;text-decoration: underline;}h1, h2, h3, h4, h5, h6{font-family: var(--wp--preset--font-family--instrument-serif);}h1{font-family: var(--wp--custom--typography--heading-1--font-family);font-size: var(--wp--custom--typography--heading-1--font-size);font-weight: var(--wp--custom--typography--heading-1--font-weight);letter-spacing: var(--wp--custom--typography--heading-1--letter-spacing);line-height: var(--wp--custom--typography--heading-1--line-height);text-transform: var(--wp--custom--typography--heading-1--text-transform);}h2{font-family: var(--wp--custom--typography--heading-2--font-family);font-size: var(--wp--custom--typography--heading-2--font-size);font-weight: var(--wp--custom--typography--heading-2--font-weight);letter-spacing: var(--wp--custom--typography--heading-2--letter-spacing);line-height: var(--wp--custom--typography--heading-2--line-height);text-transform: var(--wp--custom--typography--heading-2--text-transform);}h3{font-family: var(--wp--custom--typography--heading-3--font-family);font-size: var(--wp--custom--typography--heading-3--font-size);font-weight: var(--wp--custom--typography--heading-3--font-weight);letter-spacing: var(--wp--custom--typography--heading-3--letter-spacing);line-height: var(--wp--custom--typography--heading-3--line-height);text-transform: var(--wp--custom--typography--heading-3--text-transform);}h4{font-family: var(--wp--custom--typography--heading-4--font-family);font-size: var(--wp--custom--typography--heading-4--font-size);font-weight: var(--wp--custom--typography--heading-4--font-weight);letter-spacing: var(--wp--custom--typography--heading-4--letter-spacing);line-height: var(--wp--custom--typography--heading-4--line-height);text-transform: var(--wp--custom--typography--heading-4--text-transform);}h5{font-family: var(--wp--custom--typography--heading-5--font-family);font-size: var(--wp--custom--typography--heading-5--font-size);font-weight: var(--wp--custom--typography--heading-5--font-weight);letter-spacing: var(--wp--custom--typography--heading-5--letter-spacing);line-height: var(--wp--custom--typography--heading-5--line-height);text-transform: var(--wp--custom--typography--heading-5--text-transform);}h6{font-family: var(--wp--custom--typography--heading-6--font-family);font-size: var(--wp--custom--typography--heading-6--font-size);font-weight: var(--wp--custom--typography--heading-6--font-weight);letter-spacing: var(--wp--custom--typography--heading-6--letter-spacing);line-height: var(--wp--custom--typography--heading-6--line-height);text-transform: var(--wp--custom--typography--heading-6--text-transform);}:root :where(.wp-element-button, .wp-block-button__link){background-color: var(--wp--preset--color--pale-gray);border-radius: 0px;border-color: var(--wp--preset--color--pale-gray);border-width: 2px;border-style: solid;color: var(--wp--preset--color--charcoal);font-family: var(--wp--custom--typography--heading-6--font-family);font-size: var(--wp--custom--typography--heading-6--font-size);font-weight: var(--wp--custom--typography--heading-6--font-weight);letter-spacing: var(--wp--custom--typography--heading-6--letter-spacing);line-height: var(--wp--custom--typography--heading-6--line-height);padding-top: var(--wp--preset--spacing--15);padding-right: var(--wp--preset--spacing--20);padding-bottom: var(--wp--preset--spacing--15);padding-left: var(--wp--preset--spacing--20);text-decoration: none;text-transform: var(--wp--custom--typography--heading-6--text-transform);}:root :where(.wp-element-button:hover, .wp-block-button__link:hover){background-color: var(--wp--preset--color--light-gray);}:root :where(.wp-element-caption, .wp-block-audio figcaption, .wp-block-embed figcaption, .wp-block-gallery figcaption, .wp-block-image figcaption, .wp-block-table figcaption, .wp-block-video figcaption){color: var(--wp--preset--color--gray);font-size: var(--wp--custom--typography--small--font-size);}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-charcoal-color{color: var(--wp--preset--color--charcoal) !important;}.has-deep-navy-blue-color{color: var(--wp--preset--color--deep-navy-blue) !important;}.has-navy-blue-color{color: var(--wp--preset--color--navy-blue) !important;}.has-navy-accent-color{color: var(--wp--preset--color--navy-accent) !important;}.has-zodiac-blue-color{color: var(--wp--preset--color--zodiac-blue) !important;}.has-vivid-cyan-color{color: var(--wp--preset--color--vivid-cyan) !important;}.has-deep-red-color{color: var(--wp--preset--color--deep-red) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-gray-color{color: var(--wp--preset--color--gray) !important;}.has-pale-gray-color{color: var(--wp--preset--color--pale-gray) !important;}.has-stone-color{color: var(--wp--preset--color--stone) !important;}.has-light-gray-color{color: var(--wp--preset--color--light-gray) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-charcoal-background-color{background-color: var(--wp--preset--color--charcoal) !important;}.has-deep-navy-blue-background-color{background-color: var(--wp--preset--color--deep-navy-blue) !important;}.has-navy-blue-background-color{background-color: var(--wp--preset--color--navy-blue) !important;}.has-navy-accent-background-color{background-color: var(--wp--preset--color--navy-accent) !important;}.has-zodiac-blue-background-color{background-color: var(--wp--preset--color--zodiac-blue) !important;}.has-vivid-cyan-background-color{background-color: var(--wp--preset--color--vivid-cyan) !important;}.has-deep-red-background-color{background-color: var(--wp--preset--color--deep-red) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-gray-background-color{background-color: var(--wp--preset--color--gray) !important;}.has-pale-gray-background-color{background-color: var(--wp--preset--color--pale-gray) !important;}.has-stone-background-color{background-color: var(--wp--preset--color--stone) !important;}.has-light-gray-background-color{background-color: var(--wp--preset--color--light-gray) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-charcoal-border-color{border-color: var(--wp--preset--color--charcoal) !important;}.has-deep-navy-blue-border-color{border-color: var(--wp--preset--color--deep-navy-blue) !important;}.has-navy-blue-border-color{border-color: var(--wp--preset--color--navy-blue) !important;}.has-navy-accent-border-color{border-color: var(--wp--preset--color--navy-accent) !important;}.has-zodiac-blue-border-color{border-color: var(--wp--preset--color--zodiac-blue) !important;}.has-vivid-cyan-border-color{border-color: var(--wp--preset--color--vivid-cyan) !important;}.has-deep-red-border-color{border-color: var(--wp--preset--color--deep-red) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-gray-border-color{border-color: var(--wp--preset--color--gray) !important;}.has-pale-gray-border-color{border-color: var(--wp--preset--color--pale-gray) !important;}.has-stone-border-color{border-color: var(--wp--preset--color--stone) !important;}.has-light-gray-border-color{border-color: var(--wp--preset--color--light-gray) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-blue-gradient-background{background: var(--wp--preset--gradient--blue) !important;}.has-blue-alt-gradient-background{background: var(--wp--preset--gradient--blue-alt) !important;}.has-topper-gradient-background{background: var(--wp--preset--gradient--topper) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-small-caps-font-size{font-size: var(--wp--preset--font-size--small-caps) !important;}.has-intermediate-font-size{font-size: var(--wp--preset--font-size--intermediate) !important;}.has-regular-font-size{font-size: var(--wp--preset--font-size--regular) !important;}.has-display-font-size{font-size: var(--wp--preset--font-size--display) !important;}.has-heading-1-font-size{font-size: var(--wp--preset--font-size--heading-1) !important;}.has-heading-2-font-size{font-size: var(--wp--preset--font-size--heading-2) !important;}.has-heading-3-font-size{font-size: var(--wp--preset--font-size--heading-3) !important;}.has-heading-4-font-size{font-size: var(--wp--preset--font-size--heading-4) !important;}.has-heading-5-font-size{font-size: var(--wp--preset--font-size--heading-5) !important;}.has-heading-6-font-size{font-size: var(--wp--preset--font-size--heading-6) !important;}.has-instrument-sans-font-family{font-family: var(--wp--preset--font-family--instrument-sans) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.wp-block-button .wp-block-button__link.has-charcoal-color{color: var(--wp--preset--color--charcoal) !important;}.wp-block-button .wp-block-button__link.has-pale-gray-color{color: var(--wp--preset--color--pale-gray) !important;}.wp-block-button .wp-block-button__link.has-light-gray-color{color: var(--wp--preset--color--light-gray) !important;}.wp-block-button .wp-block-button__link.has-white-color{color: var(--wp--preset--color--white) !important;}.wp-block-button .wp-block-button__link.has-charcoal-background-color{background-color: var(--wp--preset--color--charcoal) !important;}.wp-block-button .wp-block-button__link.has-pale-gray-background-color{background-color: var(--wp--preset--color--pale-gray) !important;}.wp-block-button .wp-block-button__link.has-light-gray-background-color{background-color: var(--wp--preset--color--light-gray) !important;}.wp-block-button .wp-block-button__link.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.wp-block-button .wp-block-button__link.has-charcoal-border-color{border-color: var(--wp--preset--color--charcoal) !important;}.wp-block-button .wp-block-button__link.has-pale-gray-border-color{border-color: var(--wp--preset--color--pale-gray) !important;}.wp-block-button .wp-block-button__link.has-light-gray-border-color{border-color: var(--wp--preset--color--light-gray) !important;}.wp-block-button .wp-block-button__link.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}
+</style>
+<style id='wp-block-template-skip-link-inline-css'>
+
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip: rect(1px,1px,1px,1px);
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip: auto !important;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+</style>
+<link rel='stylesheet' id='all-css-26' href='https://www.whitehouse.gov/_static/??/wp-content/themes/whitehouse/style.css,/wp-content/themes/whitehouse/assets/css/main.css?m=1741297144' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSpUsX2uraG5saWRpYmxsUEWAK+aIiE=" ></script><link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-MediumItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<script type="importmap" id="wp-importmap">
+{"imports":{"@wordpress\/interactivity":"https:\/\/www.whitehouse.gov\/wp-includes\/js\/dist\/script-modules\/interactivity\/index.min.js?ver=907ea3b2f317a78b7b9b"}}
+</script>
+<script type="module" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/blocks/header/view.js?ver=8390c2e3d9a375683f6f" id="whitehouse-header-view-script-module-js-module"></script>
+<link rel="modulepreload" href="https://www.whitehouse.gov/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=907ea3b2f317a78b7b9b" id="@wordpress/interactivity-js-modulepreload"><style class='wp-fonts-local'>
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Regular.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Regular.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Regular.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:400;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Italic.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Italic.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Italic.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:500;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Medium.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Medium.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Medium.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:500;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-MediumItalic.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-MediumItalic.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-MediumItalic.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:600;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBold.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBold.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBold.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:600;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBoldItalic.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBoldItalic.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-SemiBoldItalic.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:700;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Bold.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Bold.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-Bold.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:700;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-BoldItalic.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-BoldItalic.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-sans/InstrumentSans-BoldItalic.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Regular.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Italic.woff') format('woff'), url('https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/fonts/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');font-stretch:normal;}
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NRKGZJZM');</script>
+<!-- End Google Tag Manager --></head>
+
+<body class="post-template-default single single-post postid-1532 wp-embed-responsive has-topper">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRKGZJZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wp-site-blocks"><header class="alignfull site-header wp-block-template-part">
+<div
+	class="wp-block-whitehouse-header" data-wp-interactive="whitehouse-header" data-wp-context="{&quot;popover&quot;: null, &quot;stickyThreshold&quot;: &quot;300px&quot;}" data-wp-on-async-window--scroll="callbacks.handleWindowScroll">
+	<div class="wp-block-whitehouse-header__inner-container">
+		<div class="wp-block-whitehouse-header__content">
+			<div class="wp-block-whitehouse-header__p1">
+				<div class="wp-block-whitehouse-header__menu-toggle">
+					<button
+						class="button-icon wp-block-whitehouse-header__menu-toggle--button"
+						aria-controls="wp-block-whitehouse-header-4__popover"
+						aria-haspopup="dialog"
+						data-wp-bind--aria-expanded="callbacks.isMenuPopoverOpen"
+						data-wp-on--click="actions.toggleMenu"
+						data-wp-bind--title="callbacks.getMenuButtonTitle"
+					>
+						<svg class="wp-block-whitehouse-header__menu-toggle--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20"><rect y="5" width="20" height="3.1" rx="1.5" ry="1.5" fill="currentColor" /><rect y="12.4" width="20" height="3.1" rx="1.5" ry="1.5" fill="currentColor" /></svg>						<svg class="wp-block-whitehouse-header__menu-toggle--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.663 2.10024C17.0552 2.07743 17.441 2.20784 17.739 2.46397C18.3266 3.05507 18.3266 4.00976 17.739 4.60087L4.87214 17.4678C4.26097 18.0396 3.30194 18.0079 2.73005 17.3967C2.2129 16.844 2.18276 15.9945 2.65948 15.4066L15.6021 2.46397C15.8962 2.21153 16.2758 2.08137 16.663 2.10024Z" fill="currentColor" />
+    <path d="M3.81132 2.1002C4.20889 2.1019 4.58993 2.25971 4.87221 2.53969L17.7391 15.4066C18.2835 16.0424 18.2095 16.9991 17.5738 17.5435C17.0064 18.0294 16.1695 18.0294 15.6022 17.5435L2.65955 4.67664C2.04853 4.1046 2.01694 3.14552 2.58898 2.5345C2.61174 2.5102 2.63524 2.48669 2.65955 2.46393C2.97646 2.18834 3.39354 2.05663 3.81132 2.1002Z" fill="currentColor" />
+</svg>
+						<span data-wp-watch="callbacks.getMenuButtonLabel">Menu</span>
+					</button>
+				</div>
+				<div class="wp-block-whitehouse-header__administration">
+					<span>President Donald J. Trump</span>
+				</div>
+			</div>
+			<div class="wp-block-whitehouse-header__wordmark">
+				<a href="https://www.whitehouse.gov" rel="home" title="The White House">
+					<span>The</span>
+					White House				</a>
+			</div>
+			<div class="wp-block-whitehouse-header__p2">
+				<div class="wp-block-whitehouse-header__live"></div>
+				<div class="wp-block-whitehouse-header__search">
+					<button
+						class="button-icon wp-block-whitehouse-header__search--button"
+						aria-controls="wp-block-whitehouse-header-4__popover"
+						aria-haspopup="dialog"
+						data-wp-bind--aria-expanded="callbacks.isMenuPopoverOpen"
+						data-wp-on--click="actions.toggleSearch"
+						data-wp-bind--title="callbacks.getSearchButtonTitle"
+					>
+						<span data-wp-watch="callbacks.getSearchButtonLabel">Search</span>
+						<svg class="wp-block-whitehouse-header__search-icon wp-block-whitehouse-header__search-icon--open" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.3929 18.306L13.8709 13.6029C15.0336 12.2207 15.6706 10.4817 15.6706 8.67124C15.6706 4.44139 12.2292 1 7.99937 1C3.76951 1 0.328125 4.44139 0.328125 8.67124C0.328125 12.9011 3.76951 16.3425 7.99937 16.3425C9.58732 16.3425 11.1006 15.8635 12.3943 14.9543L16.9507 19.6932C17.1412 19.8909 17.3973 20 17.6718 20C17.9316 20 18.1781 19.9009 18.3652 19.7208C18.7628 19.3383 18.7755 18.7039 18.3929 18.306ZM7.99937 3.00119C11.1259 3.00119 13.6694 5.54471 13.6694 8.67124C13.6694 11.7978 11.1259 14.3413 7.99937 14.3413C4.87284 14.3413 2.32932 11.7978 2.32932 8.67124C2.32932 5.54471 4.87284 3.00119 7.99937 3.00119Z" fill="currentColor" />
+</svg>
+						<svg class="wp-block-whitehouse-header__search-icon wp-block-whitehouse-header__search-icon--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.663 2.10024C17.0552 2.07743 17.441 2.20784 17.739 2.46397C18.3266 3.05507 18.3266 4.00976 17.739 4.60087L4.87214 17.4678C4.26097 18.0396 3.30194 18.0079 2.73005 17.3967C2.2129 16.844 2.18276 15.9945 2.65948 15.4066L15.6021 2.46397C15.8962 2.21153 16.2758 2.08137 16.663 2.10024Z" fill="currentColor" />
+    <path d="M3.81132 2.1002C4.20889 2.1019 4.58993 2.25971 4.87221 2.53969L17.7391 15.4066C18.2835 16.0424 18.2095 16.9991 17.5738 17.5435C17.0064 18.0294 16.1695 18.0294 15.6022 17.5435L2.65955 4.67664C2.04853 4.1046 2.01694 3.14552 2.58898 2.5345C2.61174 2.5102 2.63524 2.48669 2.65955 2.46393C2.97646 2.18834 3.39354 2.05663 3.81132 2.1002Z" fill="currentColor" />
+</svg>
+					</button>
+				</div>
+				<div class="wp-block-whitehouse-header__logo">
+					<a href="https://www.whitehouse.gov" rel="home" title="The White House">
+						<picture>
+							<source
+								type="image/webp"
+								srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/whitehouse-47-logo.webp"
+							/>
+							<img
+								class="wp-block-whitehouse-header__logo--asset"
+								src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/whitehouse-47-logo.png"
+								alt=""
+								width="868"
+								height="404"
+								loading="eager"
+								fetchpriority="high"
+							/>
+						</picture>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		id="wp-block-whitehouse-header-4__popover"
+		class="wp-block-whitehouse-header__popover"
+		role="dialog"
+		data-wp-watch="callbacks.initPopover"
+		data-wp-class--is-open="callbacks.isPopoverOpen"
+		data-wp-on-async-document--keydown="callbacks.handlePopoverKeydown"
+		aria-modal="true"
+	>
+		<div class="wp-block-whitehouse-header__popover--inner">
+			<nav
+				class="wp-block-whitehouse-header__popover--menu popover-context"
+				data-wp-class--is-visible="callbacks.isMenuPopoverOpen"
+				data-wp-class--submenu-visible="callbacks.isSubmenuPopoverOpen"
+				data-wp-on--click="actions.setCurrentPopoverMenuActiveItem"
+				data-wp-on-async-window--resize="callbacks.handlePopoverMenuResize"
+				data-wp-watch="callbacks.handlePopoverMenuBlur"
+				data-wp-init="callbacks.init"
+			>
+				<div class="wp-block-whitehouse-header__popover--navigation">
+					<ul id="menu-popover-navigation" class="wp-block-whitehouse-header__popover--menu--list menu"><li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-40" data-wp-class--is-active="callbacks.isActivePopoverMenuItem"><a data-wp-on-async--mouseenter="callbacks.handlePopoverMenuMouseover" data-wp-on-async--mouseleave="callbacks.handlePopoverMenuMouseout" href="https://www.whitehouse.gov/news/">News</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39" data-wp-class--is-active="callbacks.isActivePopoverMenuItem"><a data-wp-on-async--mouseenter="callbacks.handlePopoverMenuMouseover" data-wp-on-async--mouseleave="callbacks.handlePopoverMenuMouseout" href="https://www.whitehouse.gov/administration/">Administration</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38" data-wp-class--is-active="callbacks.isActivePopoverMenuItem"><a data-wp-on-async--mouseenter="callbacks.handlePopoverMenuMouseover" data-wp-on-async--mouseleave="callbacks.handlePopoverMenuMouseout" href="https://www.whitehouse.gov/issues/">Issues</a></li>
+<li id="menu-item-1063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1063" data-wp-class--is-active="callbacks.isActivePopoverMenuItem"><a data-wp-on-async--mouseenter="callbacks.handlePopoverMenuMouseover" data-wp-on-async--mouseleave="callbacks.handlePopoverMenuMouseout" href="https://www.whitehouse.gov/contact/">Contact</a></li>
+<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271" data-wp-class--is-active="callbacks.isActivePopoverMenuItem"><a data-wp-on-async--mouseenter="callbacks.handlePopoverMenuMouseover" data-wp-on-async--mouseleave="callbacks.handlePopoverMenuMouseout" href="https://www.whitehouse.gov/visit/">Visit</a></li>
+</ul>				</div>
+				<div class="wp-block-whitehouse-header__popover--social-links">
+				
+
+<ul class="wp-block-social-links is-layout-flex wp-block-social-links-is-layout-flex">
+	<li class="wp-social-link wp-social-link-x  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://twitter.com/whitehouse" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+</svg><span class="wp-block-social-link-label screen-reader-text">X</span></a></li>
+
+	<li class="wp-social-link wp-social-link-instagram  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.instagram.com/whitehouse/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+</svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+
+	<li class="wp-social-link wp-social-link-facebook  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/WhiteHouse/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+</svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
+</ul>
+
+				</div>
+				<figure class="wp-block-whitehouse-header__popover--cover">
+					<svg class="wp-block-whitehouse-header__popover--cover-asset" width="1044" height="1050" viewBox="0 0 522 525" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path opacity="0.4" d="M228.628 3.1663L225.223 13.8974L215.511 14.7357L222.99 19.9336L223.492 30.1616L230.581 23.5106L238.898 28.429L235.158 18.8716L242.47 11.7176L232.702 12.2206L228.628 3.1663ZM196.086 9.20252L194.412 20.2689L184.979 22.5046L192.961 26.5287L194.635 36.7008L200.775 29.0997L209.706 32.9562L204.794 24.0695L211.269 15.9653L201.612 17.8097L196.086 9.20252ZM164.773 19.4306L164.606 30.497L155.675 34.0181L163.992 36.9803L166.783 46.7053L172.141 38.4335L181.407 41.0044L175.434 32.8444L180.904 23.9577L171.304 27.0876L164.773 19.4306ZM135.134 33.571L136.307 44.4697L127.823 48.7174L136.53 50.7854L140.381 60.2309L144.623 51.2884L154.335 52.6298L147.414 45.5316L151.656 35.8066L142.447 40.1661L135.134 33.571ZM107.505 51.2325L110.073 61.74L102.314 67.2173L110.91 68.391L116.101 76.9423L119.059 67.6644L128.939 68.1115L120.957 61.6282L124.027 51.4561L115.599 56.9893L107.505 51.2325ZM82.3876 72.1357L86.0715 82.3078L79.2619 88.7912H87.8577L93.8859 96.7277L95.672 87.1144L105.552 86.1084L96.9558 80.9664L98.6303 70.6266L91.1509 77.11L82.3876 72.1357ZM60.0051 96.0011L65.0286 105.558L59.0004 112.824L67.3171 111.651L74.4058 118.972L75.0198 108.912L84.8994 106.844L75.3547 102.764L75.8013 92.5359L69.2707 99.634L60.0051 96.0011ZM40.6925 122.605L46.7207 131.212L41.8088 139.317L50.0697 136.913L57.9957 143.564L57.3259 133.224L66.8706 130.095L57.1026 127.021L56.2654 116.96L50.4046 124.897L40.6925 122.605ZM24.8405 151.389L32.0967 159.158L28.0221 168.212L36.0039 164.523L44.7113 170.168L42.6461 159.996L51.521 155.413L41.5856 153.96L39.5204 144.067L34.7201 152.507L24.8405 151.389ZM12.7841 181.905L20.8776 188.556L17.9193 198.002L25.5662 193.587L34.7759 198.002L31.6502 188.165L39.7994 182.52L29.7524 182.017L26.0685 172.739L22.4962 181.682L12.7841 181.905ZM4.85813 213.707L13.5097 219.52L11.8352 228.966L18.5332 223.656L28.4128 226.786L24.0591 217.564L31.6502 211.08L21.5474 211.751L16.8029 202.865L14.5144 212.31L4.85813 213.707ZM0.671875 246.459L10.1049 250.707L9.60256 260.6L15.6308 254.284L25.7336 256.24L20.3752 247.521L26.9058 240.2L16.8587 242.435L11.2212 234.163L10.0491 243.609L0.671875 246.459ZM0.671875 279.1L10.7189 282.23L11.3329 292.122L16.6355 285.024L26.8499 285.527L20.4868 277.87L26.1243 269.598L16.5238 272.84L9.88164 265.574V275.131L0.671875 279.1ZM4.85813 311.796L15.2401 313.696L16.9146 323.421L21.1566 315.764L31.5386 314.982L24.1149 308.163L28.5245 299.22L19.4821 303.636L12.1701 297.264L13.1748 306.822L4.85813 311.796ZM12.8399 343.598L23.5568 344.101L26.4592 353.658L29.8641 345.33L39.9111 343.374L31.8176 337.673L35.3341 328.06L26.7383 333.761L18.6449 328.284L20.8776 337.562L12.8399 343.598ZM25.008 374.003L35.7248 373.332L39.7436 382.386L41.9763 373.499L51.5768 370.425L42.8694 365.675L45.1578 355.894L37.3993 362.433L28.5803 358.241L32.1525 367.128L25.008 374.003ZM40.9158 402.898L51.2419 400.495L56.5445 409.102L57.7166 399.88L66.8148 395.688L57.7166 392.167L58.5539 381.939L51.4651 389.708L42.2554 386.578L46.6649 394.906L40.9158 402.898ZM60.2284 429.335L70.1079 425.925L76.2478 433.918V424.36L84.8436 418.995L75.2989 416.591L74.8524 406.419L69.0474 414.747L59.3353 412.847L64.8612 420.504L60.2284 429.335ZM82.8342 453.312L92.0439 448.561L99.1885 455.883L97.8489 446.269L105.831 440.121L96.0628 438.836L94.7232 429.055L89.8113 437.998L79.9317 437.159L86.5739 443.978L82.8342 453.312ZM108.175 474.271L116.603 468.123L124.697 474.327L122.129 465.049L129.218 457.951L119.338 458.062L116.715 448.449L113.143 458.007L103.375 458.51L110.631 464.49L108.175 474.271ZM135.86 491.653L143.619 484.667L152.494 489.864L148.586 481.034L154.894 472.762L144.847 474.383L140.995 465.105L138.595 475.277L129.05 477.009L136.809 481.872L135.86 491.653ZM165.555 505.737L172.085 497.745L181.797 501.769L176.774 493.497L182.076 484.778L172.197 487.405L167.452 478.686L166.169 488.579L157.071 491.653L165.387 495.509L165.555 505.737ZM196.756 515.798L202.226 507.191L212.273 509.817L206.301 502.049L210.543 492.938L201.11 496.515L195.082 488.579V498.975L186.486 503.166L195.193 505.737L196.756 515.798ZM228.795 522.002L233.372 512.388L243.419 514.009L236.889 507.191L239.679 497.298L230.804 502.328L223.995 495.174L225.167 505.402L217.185 510.432L226.283 511.885L228.795 522.002ZM261.615 524.07L264.685 514.009L274.9 514.345L267.253 508.197L269.151 498.136L260.89 504.172L253.41 498.024L255.699 507.917L248.443 513.953L257.485 514.4L261.615 524.07ZM294.324 522.002L296.557 511.662L306.436 510.376L298.343 505.514L298.845 495.118L291.198 502.272L282.937 497.13L286.454 506.743L280.258 513.73L289.133 513.059L294.324 522.002ZM326.474 515.798L327.144 505.29L337.191 502.887L328.316 499.142L327.535 488.467L321.06 496.515L312.018 492.156L316.874 501.601L311.404 509.37L320.111 507.47L326.474 515.798ZM357.564 505.57L356.95 495.062L366.551 491.373L357.341 488.579L355.388 478.351L349.75 487.237L340.484 484.108L346.457 492.659L342.047 501.266L350.643 498.192L357.564 505.57ZM387.091 491.597L384.97 481.089L394.403 476.339L384.803 474.886L381.845 464.713L377.156 474.327L367.611 472.371L374.421 480.195L371.184 489.138L379.165 485.114L387.091 491.597ZM415 473.935L411.483 464.043L420.079 458.062L410.311 457.615L405.958 447.89L402.72 458.062L393.175 457.559L400.822 464.21L398.757 473.656L406.181 468.458L415 473.935ZM440.396 452.865L435.373 443.307L443.466 436.489L433.419 437.159L428.061 428.384L426.107 438.612L416.842 439.115L425.159 445.096L424.154 454.541L430.684 448.505L440.396 452.865ZM463.002 428.943L456.36 420.057L463.672 412.12L453.793 414.356L447.597 406.252L446.927 416.48L437.829 418.268L446.536 422.963L446.983 432.688L452.844 425.925L463.002 428.943ZM481.924 402.563L474.668 394.459L480.808 385.572L471.207 388.981L464.063 381.715L464.677 391.888L455.634 394.682L465.235 398.427L466.575 408.152L471.486 400.495L481.924 402.563ZM497.553 373.499L489.459 366.401L494.483 357.179L485.385 361.762L477.403 355.391L479.189 365.284L470.761 369.028L480.808 371.487L483.096 381.045L487.338 372.605L497.553 373.499ZM509.888 342.704L500.79 336.835L504.363 326.942L496.102 332.923L487.506 327.445L490.464 337.17L482.371 342.033L492.697 343.207L496.269 352.093L499.227 343.374L509.888 342.704ZM517.982 310.902L508.27 306.151L510.67 295.923L502.744 302.742L494.036 298.382L498.055 307.604L490.632 313.584L500.846 313.473L505.423 321.745L507.377 312.69L517.982 310.902ZM522.001 278.205L511.954 274.796L512.902 264.289L505.925 272.057L496.66 268.928L501.683 277.535L495.041 284.465L505.144 283.124L510.949 290.781L511.786 281.503L522.001 278.205ZM521.666 245.342L511.34 243.05L511.172 232.71L505.144 241.317L495.432 239.194L501.628 247.13L496.102 254.62L505.646 251.993L512.735 259.091L512.121 249.533L521.666 245.342ZM517.647 212.869L506.93 211.751L505.256 201.355L500.567 211.08L490.687 209.963L497.999 217.117L493.143 225.444L502.353 221.532L510.335 227.568L508.66 218.123L517.647 212.869ZM509.386 180.844L498.669 181.458L495.599 171.23L492.194 181.458L482.315 181.626L490.408 187.662L486.724 196.605L495.32 191.575L503.804 196.493L500.902 187.55L509.386 180.844ZM497.218 150.495L486.836 152.116L482.482 142.838L480.026 153.01L470.258 154.742L479.301 159.773L476.901 168.883L484.994 162.847L493.702 166.703L490.129 158.152L497.218 150.495ZM481.478 121.487L471.263 124.617L465.737 115.731L464.9 126.07L455.188 129.033L464.788 132.61L463.337 142.335L470.817 135.069L479.859 138.143L475.003 130.15L481.478 121.487ZM462.165 95.1627L452.397 99.5222L445.922 91.4739L446.034 101.702L436.992 105.894L446.871 108.185L446.425 117.966L453.067 109.862L462.667 111.651L456.639 104.385L462.165 95.1627ZM439.615 71.1855L430.182 76.7187L422.87 69.6206L424.489 79.681L416.005 84.9906L426.107 85.9966L427.224 95.8893L432.582 86.9468L442.294 87.3939L435.373 81.19L439.615 71.1855ZM414.218 50.3941L405.734 56.8775L397.752 50.8971L400.32 60.5104L392.673 67.1614L402.553 66.9937L404.841 76.2716L408.916 66.9937L418.963 66.1554L410.981 60.6222L414.218 50.3941ZM386.422 32.6208L378.942 40.0543L370.346 35.3595L374.03 44.5815L367.388 51.9032L376.989 50.45L380.673 59.5043L383.296 49.7793L393.175 47.8231L384.524 43.4078L386.422 32.6208ZM356.727 18.9275L350.085 26.9199L341.043 23.3988L345.787 32.006L340.261 40.1102L349.471 37.5392L354.383 46.0905L355.499 36.0302L365.546 32.7885L356.281 29.3791L356.727 18.9275ZM325.581 8.86717L320.056 17.7538L310.343 15.2946L316.372 23.5665L311.683 32.1737L320.893 28.4849L326.419 36.2537V25.9698L335.852 21.7221L326.14 19.3188L325.581 8.86717ZM293.487 2.83096L288.798 12.1088L278.919 10.9351L286.007 18.5922L282.435 27.6465L290.919 22.784L297.729 29.8822L296.445 19.9336L305.32 14.2886L295.608 13.1149L293.487 2.83096ZM260.611 0.930664L257.094 10.5439H247.326L255.308 17.1949L252.852 26.8082L260.611 20.8278L268.369 26.8082L265.802 17.1949L273.895 10.5439H263.848L260.611 0.930664Z" fill="white" />
+<path opacity="0.7" d="M404.899 223.941L410.248 208.75L395.957 217.655L401.042 218.615L387.978 235.116L382.104 238.958L384.647 239.394L379.474 245.767L380.877 239.045L402.269 206.829L404.987 210.758L408.845 195.304L395.518 205.345L400.603 205.868L391.661 219.314L393.853 206.392L392.801 207.353L394.642 193.995L380.263 207.702H380.439L368.34 221.496L373.863 220.972L368.077 234.767L367.288 222.719L358.959 234.418L357.819 228.481L349.928 243.323L354.75 241.664L348.876 271.785C341.424 267.157 335.813 280.865 335.725 280.865C329.062 280.865 323.801 277.809 320.733 276.499C320.558 272.658 318.716 271.174 317.489 270.475C317.489 270.475 318.366 268.816 318.366 268.729C316.612 263.491 308.283 261.046 308.283 260.697C308.283 258.514 304.426 257.728 301.269 256.07C299.516 255.109 297.236 253.625 295.571 252.665C296.097 251.18 296.623 249.783 297.061 248.387C301.532 253.101 301.708 245.855 301.883 246.029C307.582 251.792 307.231 240.442 307.406 240.529C317.752 248.561 314.245 237.648 314.42 237.823C322.311 243.236 319.681 232.235 319.944 232.322C329.325 237.823 325.292 226.473 325.467 226.56C336.251 233.37 331.517 221.409 331.517 221.409C341.336 228.044 335.725 214.25 335.725 214.25C347.649 219.314 341.161 208.575 341.161 208.575C351.156 210.059 343.353 201.852 343.791 201.852C358.608 201.503 346.947 193.122 347.561 193.034C363.167 188.756 349.84 184.478 350.016 184.391C367.814 179.327 349.753 176.272 350.279 176.01C368.866 166.93 351.419 166.231 351.506 166.057C369.041 152.175 357.117 153.397 357.117 153.397C370.093 142.047 358.959 142.746 359.046 142.571C374.038 128.602 362.641 129.999 362.641 129.999C385.348 110.355 381.14 102.148 381.14 102.148C376.055 103.633 367.989 108.609 346.772 120.832C304.864 145.627 302.146 159.596 306.267 167.716C308.809 172.954 311.702 178.367 311.702 178.454C310.3 184.216 314.42 189.367 314.42 189.367C308.722 194.78 307.669 200.717 307.494 200.717C303.9 200.717 300.656 201.59 298.551 202.289C297.236 195.915 295.746 191.637 294.957 191.201L294.08 190.677L293.203 191.114C291.275 192.249 289.346 193.122 287.592 193.907C286.54 190.939 284.874 187.709 283.209 185.002L283.384 185.177C283.209 185.002 283.033 184.74 282.946 184.566C282.595 184.042 282.157 183.431 281.893 182.907C275.318 171.295 278.737 151.215 271.636 147.46L274.266 147.111C268.567 143.27 262.781 140.912 258.485 139.865C242.09 136.198 241.476 143.706 241.476 143.706C241.213 144.055 224.643 142.484 234.024 159.421C234.024 159.421 234.374 154.881 238.67 153.31C241.827 154.445 247.788 157.326 249.367 163.612C250.419 168.065 245.684 172.867 240.424 177.145C233.848 182.208 232.358 183.78 232.533 184.042C229.815 187.185 227.887 190.939 226.484 193.907C224.643 193.122 222.626 192.249 220.61 191.026L219.733 190.59L218.856 191.114C218.067 191.55 216.577 195.828 215.262 202.202C213.07 201.416 209.914 200.63 206.319 200.63C206.231 200.63 205.267 194.78 199.48 189.28C199.393 189.28 201.234 182.47 199.743 176.621C199.743 176.446 230.604 162.39 167.041 120.832C146.526 107.474 137.758 103.633 132.936 102.148C132.936 102.148 128.816 110.355 151.348 129.999C151.172 129.999 140.301 128.777 155.118 142.571C155.205 142.833 143.895 142.135 156.959 153.397C156.959 153.397 145.035 152.175 162.57 166.057C162.745 166.231 145.298 167.017 163.797 176.01C164.323 176.272 146.175 179.327 163.973 184.391C164.236 184.478 150.909 188.756 166.603 193.034C166.953 193.122 155.381 201.59 170.285 201.852C170.636 201.852 163.008 210.059 173.003 208.575C173.003 208.575 166.515 219.314 178.351 214.25C178.351 214.25 172.74 227.957 182.472 221.409C182.472 221.409 178 233.37 188.434 226.56C188.784 226.473 184.751 237.823 194.22 232.322C194.483 232.235 191.765 243.236 199.48 237.823C199.743 237.648 196.236 248.561 206.582 240.529C206.845 240.442 206.319 251.792 212.193 246.029C212.368 245.855 212.544 253.014 216.927 248.474C217.716 250.744 218.418 253.014 219.47 255.284C218.593 255.808 217.629 256.419 216.664 256.943C213.508 258.689 209.738 259.649 209.738 261.744C209.738 262.094 201.409 264.364 199.568 269.602C199.568 269.689 200.62 271.348 200.62 271.348C199.393 272.221 197.639 273.531 197.289 276.761C194.132 278.158 189.223 280.952 182.822 280.952C182.735 280.952 177.036 266.11 168.707 278.769C167.83 278.158 167.129 277.46 166.252 276.848C168.444 276.761 170.11 275.102 170.11 272.92C170.11 271.523 169.321 270.3 168.269 269.602C170.723 266.983 174.932 264.189 181.332 262.443C190.625 259.824 187.995 253.101 194.132 248.387C194.132 248.387 185.014 245.418 176.422 252.927C176.422 252.927 178.263 247.252 177.387 243.236C176.51 240.18 178.439 237.299 179.578 236.862C179.578 236.862 167.041 234.33 162.57 262.443C160.816 262.705 159.501 264.276 159.501 266.197C159.501 267.681 160.466 268.991 161.781 269.602C161.693 270.562 161.605 271.523 161.518 272.483C161.518 272.832 155.118 269.515 156.17 262.705C156.52 262.792 156.959 262.879 157.309 262.879C159.326 262.879 161.079 261.221 161.079 259.125C161.079 257.816 160.29 256.593 159.326 255.982C159.414 255.808 159.589 255.633 159.677 255.458C160.027 254.935 163.359 248.212 162.482 239.394C162.131 235.465 160.29 233.806 162.044 228.655C162.044 228.655 154.153 238.259 152.575 241.489C150.559 245.418 149.682 248.998 149.419 252.403C149.243 252.403 149.068 252.315 148.893 252.315C148.104 252.315 147.49 252.49 146.876 252.839C146.789 251.879 146.789 250.918 146.789 249.783C148.191 249.347 149.331 247.95 149.331 246.379C149.331 244.807 148.279 243.41 146.876 242.974C149.243 240.791 152.4 236.338 152.137 226.909C152.137 226.123 152.312 217.48 154.065 214.861C154.065 214.861 142.756 218.528 141.879 229.267C141.528 229.179 141.09 229.092 140.739 229.092C139.073 229.092 137.671 230.489 137.671 232.148C137.671 233.108 138.021 233.894 138.723 234.505C138.547 234.679 137.32 235.64 137.32 236.949C137.32 236.949 133.199 232.671 140.651 222.282C140.914 221.845 145.386 216.607 143.632 204.559C143.369 203.424 141.967 199.059 144.509 195.13C144.509 195.13 137.583 196.614 136.092 204.384C136.092 204.384 135.04 199.932 132.936 197.225C132.585 196.789 131.183 194.78 131.358 191.288C131.358 191.288 124.344 196.003 126.185 211.805C126.185 211.805 121.626 208.4 119.084 207.178C116.717 206.043 115.752 205.694 114.086 202.725C114.086 202.725 111.193 221.584 127.413 229.441C128.026 230.401 129.079 230.925 130.306 230.925C130.481 230.925 130.657 230.925 130.832 230.925C131.183 231.013 131.709 231.187 132.059 231.275C132.41 231.362 132.059 233.283 133.287 235.203C133.287 235.203 130.306 231.886 122.766 231.187C121.363 230.925 118.645 230.14 115.577 226.211C115.577 226.211 111.982 234.854 121.451 239.831C121.451 239.831 115.401 241.402 111.105 238.172C111.105 238.172 113.034 253.625 134.339 252.403C134.251 252.752 134.164 253.188 134.164 253.625C134.164 255.633 135.829 257.292 137.846 257.292C139.599 257.292 141.09 255.982 141.528 254.323C142.843 255.371 143.808 256.855 143.72 259.038C143.72 259.125 137.846 256.506 129.692 257.292C129.079 257.466 117.506 257.816 115.84 254.935C115.84 254.935 115.664 261.832 122.591 263.491C122.591 263.491 119.697 266.459 113.736 266.459C113.736 266.459 119.96 275.801 140.476 269.34C140.476 269.34 140.651 269.253 140.827 269.166C141.441 269.777 142.405 270.3 143.457 270.3C145.386 270.3 146.876 268.816 147.139 266.983C150.033 266.721 153.364 267.507 156.082 271.785C156.082 271.785 155.644 271.872 154.942 271.959C154.329 270.912 153.189 270.3 151.874 270.3C149.945 270.3 148.454 271.697 148.104 273.531C147.753 273.444 147.49 273.356 147.052 273.356C145.649 273.356 144.421 274.142 143.808 275.277C140.651 276.674 137.583 278.507 135.566 280.952C134.427 282.349 133.813 285.579 126.185 289.071C126.185 289.071 133.638 292.738 143.369 289.421C143.369 289.421 136.881 296.842 140.914 309.414C140.914 309.414 143.72 304.35 149.769 301.207C151.348 300.247 155.293 296.23 156.959 288.111C157.485 288.984 158.449 289.857 159.677 290.905C160.115 291.429 154.329 299.374 165.551 300.159C166.515 300.247 169.847 306.62 173.354 302.953C173.354 303.04 173.441 303.128 173.441 303.128C173.441 303.128 180.105 301.731 183.173 297.715C187.82 304.088 191.414 311.509 190.888 318.406C190.362 322.772 189.836 327.224 193.782 327.835C195.973 328.01 201.935 314.303 184.664 293.699C184.664 292.826 184.576 291.952 184.225 290.905C183.787 289.683 196.324 285.928 202.724 284.27C202.111 285.055 201.497 285.841 201.497 286.452C201.497 286.627 205.091 287.5 206.319 287.5C206.319 287.5 205.881 288.111 205.881 288.897C205.881 288.897 212.018 290.119 219.908 286.539C221.399 285.928 224.029 285.317 226.133 282.698C227.273 281.476 233.41 278.682 235.777 278.42C235.953 278.42 236.128 278.42 236.303 278.333C236.479 278.507 236.742 278.682 236.917 278.857C237.355 281.301 238.057 284.619 238.846 284.968C239.021 285.055 238.495 287.151 239.021 289.333C232.884 294.397 219.119 307.144 217.979 321.549C217.979 322.16 221.574 321.2 223.678 320.065C223.766 319.89 221.925 324.692 223.065 330.542C223.065 330.891 226.659 329.931 228.588 328.097C228.851 327.835 227.799 334.209 230.341 339.098C230.517 339.36 234.637 337.614 236.04 336.129C236.303 335.78 236.303 344.074 240.512 348.003C240.862 348.352 244.72 345.995 247.701 341.455C247.788 341.193 250.156 348.003 256.03 351.932C256.468 352.281 262.43 348.003 266.025 340.32C266.025 339.971 270.321 345.559 274.091 346.519C274.266 346.694 276.721 344.773 278.211 337.09C278.387 336.653 280.754 339.273 283.822 339.534C284.173 339.534 286.277 335.606 286.452 329.32C286.452 328.97 289.609 331.066 293.116 330.629C293.466 330.629 294.08 324.169 292.853 319.192C292.853 318.668 295.308 320.851 298.025 320.24C298.464 320.24 297.938 302.342 275.932 286.976C276.019 286.365 276.107 285.928 276.195 285.841C276.984 285.579 277.422 281.738 277.773 278.857C278.737 277.983 279.614 277.198 280.491 276.325C281.28 276.936 282.157 277.46 283.121 277.547C285.576 277.634 290.836 280.428 291.801 281.825C294.08 284.357 297.061 285.143 298.464 285.841C306.53 289.246 312.842 288.024 312.842 287.762C312.842 286.976 312.316 286.452 312.316 286.452C313.719 286.452 317.314 285.404 317.314 285.317C317.314 285.055 317.138 284.793 316.875 284.27C323.451 285.928 335.462 289.595 335.199 290.817C334.41 293 334.673 294.746 335.287 296.23L333.709 297.802L328.01 297.715L307.319 317.009L312.579 317.097H312.755L310.738 319.716L314.333 320.589L313.807 321.637L315.648 322.859L314.596 326.264L321.259 326.002L322.662 326.526L323.977 330.367L328.711 329.32L327.922 330.978L330.377 331.851L331.254 330.105L332.656 332.55L337.04 330.542L338.531 331.764L340.459 331.153L343.791 333.336L348.35 308.715L345.194 304.612L345.457 303.215C345.632 303.302 345.807 303.302 345.807 303.302C345.807 303.302 345.807 303.215 345.895 303.04C349.139 306.882 352.646 300.334 353.698 300.247C364.833 299.635 359.046 291.603 359.572 290.992C365.972 285.754 362.816 282.873 360.712 281.65L396.833 254.149L398.061 258.689L406.478 244.807L390.696 250.569L395.518 252.752L379.299 265.062L384.822 252.839L382.543 253.974L391.31 245.069L391.398 245.244L391.485 244.894L404.812 231.449L406.653 235.902L413.404 221.147L398.324 228.568L403.321 229.965L392.976 240.616L396.395 230.14L393.59 231.973L403.058 220.099L404.899 223.941ZM388.68 208.75L389.644 209.884L386.926 212.329L388.68 208.75ZM380.789 224.552L384.384 217.48H386.225L381.228 226.211L381.491 223.854L380.789 224.552ZM380.965 207.702L385.699 207.615L380.526 217.742L380.965 207.702ZM380.614 231.1L387.891 218.266L390.17 221.06L380.088 236.076L380.614 231.1ZM140.213 245.244C140.213 245.244 137.846 237.997 138.81 235.203C138.898 235.116 138.898 234.941 138.898 234.854C139.249 235.029 139.687 235.116 140.125 235.116C140.651 235.116 141.177 234.941 141.616 234.767C141.879 237.735 142.142 242.013 140.213 245.244ZM142.317 248.736C142.756 249.172 143.457 249.609 144.071 249.783C143.983 251.355 144.071 253.188 144.421 254.236C144.509 254.149 142.317 251.792 142.317 248.736ZM147.928 259.475C148.016 259.475 148.104 259.475 148.191 259.475C148.542 259.475 148.98 259.387 149.331 259.3C149.682 261.046 150.296 262.618 150.734 264.014C150.822 264.102 149.331 262.53 147.928 259.475ZM266.638 282.698V223.155H273.477V277.547C271.373 279.38 269.093 281.039 266.638 282.698ZM260.326 286.365C259.186 286.976 257.959 287.587 256.731 288.111C255.504 287.587 254.276 286.889 253.137 286.365V223.068H260.238L260.326 286.365ZM246.912 282.785C244.457 281.214 242.177 279.468 239.986 277.634V223.242H246.912V282.785ZM233.761 271.61C231.218 268.816 228.939 265.848 226.922 262.705V223.242H233.761V271.61ZM220.522 249.347C220.259 248.474 219.996 247.601 219.645 246.728C217.103 238.521 216.314 230.489 216.226 223.155H220.522V249.347ZM279.877 223.155H286.803V262.443C284.787 265.673 282.507 268.642 279.877 271.523V223.155ZM297.324 223.155C297.324 230.401 296.36 238.434 293.992 246.64C293.729 247.601 293.466 248.474 293.028 249.434V223.242H297.324V223.155ZM220.347 194.78C239.46 204.995 252.786 194.169 256.731 190.241C258.309 191.899 261.553 194.693 266.112 196.701C271.986 199.32 281.455 201.067 293.203 194.78C294.255 198.098 296.798 207.265 297.236 218.964H216.226C216.84 207.265 219.295 198.185 220.347 194.78ZM386.751 239.831L387.102 239.918L381.754 246.029L386.751 239.831ZM378.685 248.474L379.123 248.91L378.247 249.871L378.685 248.474ZM376.581 221.933L377.896 223.242L373.775 231.449L371.759 233.457L376.581 221.933ZM374.915 248.998L376.756 251.617L357.819 273.531L374.915 248.998ZM361.063 265.411L370.794 247.863L373.249 248.037L361.063 265.411ZM373.249 243.497L375.879 238.783L377.282 240.267L373.249 243.497ZM369.918 237.561L373.074 237.473L359.572 261.919L369.918 237.561ZM362.553 235.203L360.274 241.926L359.134 235.902L362.553 235.203ZM351.331 268.292L356.679 241.664L359.66 243.672L351.331 268.292ZM352.909 270.213L364.482 235.902L366.674 237.648L352.909 270.213ZM354.838 280.166L371.32 260.959L374.301 261.919L354.926 280.166C354.926 280.166 354.926 280.166 354.838 280.166ZM358.082 280.603C357.906 280.515 357.731 280.515 357.556 280.428L375.967 263.141L377.107 266.284L358.082 280.603ZM375.967 256.943L373.951 258.078L388.768 240.966L389.995 242.974L375.967 256.943Z" fill="white" />
+<path d="M220.348 428.216C216.351 428.216 213.088 427.171 210.558 425.081C208.028 422.991 206.469 420.113 205.883 416.446H213.143C213.473 418.39 214.279 419.893 215.563 420.956C216.883 422.02 218.423 422.551 220.183 422.551C222.126 422.551 223.703 421.91 224.913 420.626C226.159 419.343 226.783 417.363 226.783 414.686C226.783 412.083 226.178 410.121 224.968 408.801C223.794 407.445 222.218 406.766 220.238 406.766C218.954 406.766 217.799 407.041 216.773 407.591C215.746 408.141 214.976 408.911 214.463 409.901H207.973L209.898 388.066H232.063V393.731H212.813L216.333 392.741L215.233 406.326L213.033 405.941C213.913 404.585 215.049 403.503 216.443 402.696C217.836 401.89 219.596 401.486 221.723 401.486C224.253 401.486 226.453 402.036 228.323 403.136C230.229 404.236 231.714 405.776 232.778 407.756C233.878 409.7 234.428 412.046 234.428 414.796C234.428 417.62 233.841 420.04 232.668 422.056C231.494 424.036 229.863 425.558 227.773 426.621C225.683 427.685 223.208 428.216 220.348 428.216Z" fill="white" />
+<path d="M188.02 427.666V417.216L188.35 416.116V393.511L191.1 394.721L174.82 416.556L171.685 413.971H199.625V419.636H168.605V414.191L188.24 388.066H195.335V427.666H188.02Z" fill="white" />
+<line x1="261.93" y1="369.881" x2="261.93" y2="446.402" stroke="white" stroke-opacity="0.4" stroke-width="2.39129" />
+<path d="M329.486 427.942C330.036 421.672 331.558 415.585 334.051 409.682C336.544 403.778 339.899 398.132 344.116 392.742L344.226 394.007H322.336V388.342H350.716V393.457C348.076 397.27 345.802 401.047 343.896 404.787C342.026 408.49 340.523 412.248 339.386 416.062C338.286 419.875 337.589 423.835 337.296 427.942H329.486Z" fill="white" />
+<path d="M306.45 427.942V417.492L306.78 416.392V393.787L309.53 394.997L293.25 416.832L290.115 414.247H318.055V419.912H287.035V414.467L306.67 388.342H313.765V427.942H306.45Z" fill="white" />
+</g>
+<defs>
+
+<rect width="521.329" height="523.139" fill="white" transform="translate(0.671875 0.930664)" />
+
+</defs>
+</svg>
+				</figure>
+			</nav>
+			<search
+				class="wp-block-whitehouse-header__popover--search popover-context"
+				data-wp-class--is-visible="callbacks.isSearchPopoverOpen"
+			>
+				<form role="search" method="get" action="https://www.whitehouse.gov">
+					<label class="screen-reader-text" for="wp-block-whitehouse-header-4__popover--search-input">Search for:</label>
+					<input
+						type="search"
+						id="wp-block-whitehouse-header-4__popover--search-input"
+						class="wp-block-whitehouse-header__popover--search--input"
+						placeholder="Type Your Search&hellip;"
+						value=""
+						name="s"
+						title="Search for:"
+						/>
+					<button
+						type="submit"
+						class="wp-block-whitehouse-header__popover--search--submit"
+						title="Search"
+					>Press Enter to Search</button>
+				</form>
+			</search>
+		</div>
+	</div>
+</div>
+</header>
+
+
+<main class="wp-block-group site-content is-layout-flow wp-block-group-is-layout-flow">
+	<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+<div class="alignfull has-wide-width wp-block-whitehouse-topper">
+	<div class="wp-block-whitehouse-topper__inner-container">
+		<div class="wp-block-whitehouse-topper__content">
+			
+							<div class="wp-block-whitehouse-topper__eyebrow">
+					<a href="https://www.whitehouse.gov/remarks/">Remarks<svg class="wp-block-whitehouse-topper__eyebrow--icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.724808 1.45055C0.732563 0.940756 1.15149 0.539597 1.66097 0.554084L8.18243 0.73743C8.43709 0.74459 8.66622 0.854307 8.83047 1.02583C8.99471 1.19735 9.09441 1.43101 9.09053 1.68575C9.08278 2.19554 8.66385 2.5967 8.15436 2.58221L3.85933 2.46146L10.0157 8.89043C10.3703 9.2608 10.3618 9.84465 9.99583 10.1951C9.62987 10.5455 9.04621 10.5288 8.69154 10.1584L2.5352 3.72945L2.46984 8.02568C2.46209 8.53547 2.04316 8.93663 1.53368 8.92214C1.02419 8.90766 0.617659 8.48345 0.625575 7.97383L0.724808 1.45055Z" fill="currentColor" />
+</svg>
+</a>				</div>
+			
+							<h1 class="wp-block-whitehouse-topper__headline">
+					PRESS GAGGLE BY <br>PRESIDENT TRUMP Aboard Air Force One<br>En Route Joint Base Andrews				</h1>
+			
+			
+				<div class="wp-block-whitehouse-topper__meta">
+					<div class="wp-block-whitehouse-topper__meta--byline-subcategory">
+						
+<div class="wp-block-whitehouse-byline-subcategory">
+	The White House</div>
+					</div>
+					
+					<div class="wp-block-whitehouse-topper__meta--date">
+						<div class="wp-block-post-date"><time datetime="2025-02-19T16:34:27-05:00">February 19, 2025</time></div>					</div>
+				</div>
+
+			
+					</div>
+	</div>
+</div>
+
+
+
+<p class="has-text-align-left">9:00 P.M. EST</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Hello, everybody.&nbsp; Hello.</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; Hello.</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Hello, everybody.&nbsp;</p>
+
+
+
+<p>So, you just saw this.&nbsp; (The president holds up a USA Today article entitled “How America voted, which counties shifted toward Trump and a look at voter turnout.”)&nbsp; This just came out, and I&#8217;d say that&#8217;s quite good.&nbsp; Right?&nbsp; By any standard, that&#8217;s quite good.&nbsp;</p>
+
+
+
+<p>I shouldn&#8217;t leave USA &#8212; is anybody here from USA Today?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Yesterday, we had someone from &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yesterday.&nbsp; We missed him.&nbsp;</p>
+
+
+
+<p>Does everybody know Steven Cheung?&nbsp; He&#8217;s a sweetheart.&nbsp; You wouldn&#8217;t want to get in a fight with him, right?</p>
+
+
+
+<p>Anyway, what&#8217;s up?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Mr. President, the TikTok deal, any developments there?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, there&#8217;s a lot of people interested in TikTok, and I think we have a chance of doing something good.&nbsp; And we&#8217;ll be speaking to China about that also, because they&#8217;re a party to it, obviously.&nbsp; But it would be great to keep TikTok alive, sell it to somebody that&#8217;s going to do a great job with it.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Did you see the CEO today at the event, sir?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Did I what?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Did you see the CEO today at the event?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, I didn&#8217;t.&nbsp; I didn’t speak to him.&nbsp; Was he there?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; He was supposed to be there.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I think so, yeah, but I did not see him.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, Elon Musk is proposing potentially giving money to Americans based on what DOGE is finding. &nbsp;Do you have any thoughts on that?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I love it.&nbsp; A 20 percent dividend, so to speak, for the money that we&#8217;re saving by going after the waste and fraud and abuse and all of the other things that are happening.&nbsp; I think it&#8217;s a great idea.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; How much money do you think Americans &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; It could be a lot.&nbsp; I mean, if it&#8217;s 20 percent, we’d give back a lot of money to the taxpayer.&nbsp; And also, it’d give an incentive for the taxpayer to go out and report things to us where we can save money.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; So, you signed an immigration-related executive order today.&nbsp; Ho- &#8212; what do you think of ICE arrests right now?&nbsp; Do you think that they need to increase the number of people they&#8217;re arresting &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Where?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; &#8212; increase the &#8212; the pace of the ICE arrests?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, I think they&#8217;re doing a great job.&nbsp; You know, you have people that are hiding.&nbsp; They are professionals at hiding.&nbsp; That&#8217;s what they&#8217;ve done for a big part of their lives.&nbsp;</p>
+
+
+
+<p>And they&#8217;re criminals.&nbsp; In many cases, very serious criminals, including murderers.&nbsp; And, obviously, they&#8217;re not easy to capture, but they&#8217;re being captured in record numbers, and they&#8217;re being brought out of our country, being brought back to where they came from.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Mr. President, on Boeing.&nbsp; You mentioned maybe taking a different route.&nbsp; What would a different route entail?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; On what?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; On Boeing, with the Air Force One plane.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, I&#8217;m not happy with Boeing.&nbsp; It takes them a long time to do &#8212;</p>
+
+
+
+<p>You know, Air Force One, we gave that contract out a long time ago.&nbsp; It was a fixed-price contract, and I&#8217;m not happy with the fact that it&#8217;s taking so long.&nbsp; And we may do something else.&nbsp; We may go out and buy a plane or get a plane or something, but I&#8217;m not happy with the fact that it&#8217;s taken Boeing so long.&nbsp; There no excuse for it.&nbsp;</p>
+
+
+
+<p>(Cross-talk.)</p>
+
+
+
+<p>And, you know, they had a fixed-price contract.&nbsp; I made that deal, and now they &#8212; supposedly, they&#8217;re losing a lot of money and they&#8217;d like to see if they could, you know, up the price.&nbsp; But I make fixed-price deals.&nbsp; I don&#8217;t like time and material deals.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, the only other commercial aircraft maker that could make a plane that big is Airbus.&nbsp; Would you consider buying a &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, I would not consider Airbus over Boeing, no.&nbsp; But I could buy one that was used and convert it.&nbsp; I could buy one from another country, perhaps, or get one from another country.&nbsp;</p>
+
+
+
+<p>So, we&#8217;re looking at other alternatives, because it&#8217;s taking Boeing too long.&nbsp;</p>
+
+
+
+<p>(Cross-talk.)</p>
+
+
+
+<p>You know, they were supposed to be finished, like, years ago.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Yeah.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Years ago.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, and you &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Don&#8217;t forget, I signed that contract during my term, and it was a very good contract.&nbsp; And I took, like, a billion six off the price, and it was supposed to be done, you know, quickly, and it&#8217;s a long time.&nbsp; Right?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Would you push for your preferred color scheme for Air Force One?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Oh, no, it&#8217;s going to be that color, yeah.&nbsp; No matter what, it&#8217;s going to be for that color.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, about Gaza.&nbsp; Do you e- &#8212; do you find the Egyptian proposal to redevelop Gaza acceptable?&nbsp; And does that change your &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I haven&#8217;t seen it.&nbsp; I haven’t seen it.&nbsp; When I see it, I&#8217;ll let you know.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, can I you about Ukraine?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; You &#8212; you said today that you had a deal on critical minerals, and Ukraine broke it.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah, we had a deal where we were going to get &#8212; look, you have to understand, Europe is being paid back the money that they put up, and they&#8217;re only putting up a fraction of what we&#8217;re putting up.&nbsp; I think they&#8217;re in for $100 billion, and we’re in for $350 billion.&nbsp; There&#8217;s no reason that should have happened.&nbsp; It&#8217;s Biden&#8217;s fault.&nbsp; He shouldn&#8217;t have allowed that to happen.&nbsp;</p>
+
+
+
+<p>But on top of it all, they&#8217;re getting their $100 billion back, and we&#8217;re not.&nbsp; And I&#8217;ve been talking about this for two years.&nbsp; I said, “You have to loan them the money so that if things work out, they&#8217;re going to pay you back.”&nbsp; And they didn&#8217;t do that.&nbsp; So, Biden didn&#8217;t do it.&nbsp; It&#8217;s his fault.&nbsp; Nobody has ever seen anything so stupid.&nbsp;</p>
+
+
+
+<p>So, Europe gets their money back, and they&#8217;re only in for a small fraction.&nbsp; And, obviously, everything is important, but it&#8217;s more important for them because they&#8217;re right next to Russia.&nbsp; So, it&#8217;s more important than &#8212; we have an ocean in between us.&nbsp; So, it&#8217;s obviously more important to the European countries than it is to the U.S.</p>
+
+
+
+<p>(Cross-talk.)</p>
+
+
+
+<p>But here&#8217;s the thing, we don&#8217;t get our money back.&nbsp; And we told them that the deal is we&#8217;ll do something for the rare earth and some oil, et cetera, et cetera, and that would be all right.&nbsp; And they agreed to it, more or less.&nbsp;</p>
+
+
+
+<p>And then Scott Bessent actually went there and was treated rather rudely, because &#8212; essentially, they told him no, and Zelenskyy was sleeping and unavailable to meet him.&nbsp; He traveled many hours on the train, which is a dangerous trip.&nbsp; And we&#8217;re talking about the secretary of the Treasury.&nbsp; He went there to get a document signed.&nbsp; And when he got there, he came back empty.&nbsp; They wouldn&#8217;t sign the document.&nbsp;</p>
+
+
+
+<p>But for Europe, they pay back their money.&nbsp; It&#8217;s a loan.&nbsp; Think of that.&nbsp; And we should’ve had a loan, too, but we had an administration that was incompetent.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Can you resurrect that deal?&nbsp; Is there anything that you can do?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah, I think I’m going to resurrect it, or, you know, we&#8217;ll see what happens.&nbsp; But I&#8217;m going to resurrect it, or things are not going to make him too happy.&nbsp;</p>
+
+
+
+<p>And, look, it&#8217;s time for elections.&nbsp; They haven&#8217;t had an election in a long time.&nbsp; It&#8217;s wonderful to say, “You know, we can&#8217;t have an election.”&nbsp; But it&#8217;s time for elections.</p>
+
+
+
+<p>And it&#8217;s also time to find out what happened with all the money, because he made the statement that half of it he doesn&#8217;t know where it is or something like that.&nbsp; And I&#8217;d like to find out: All the money that we&#8217;ve been sending to Ukraine, where is it?</p>
+
+
+
+<p>And I can tell you we&#8217;re doing very well with Russia.&nbsp; We&#8217;re going to do something with Russia that he was unable to do.&nbsp; We can make a deal with Russia to stop the killing of, you know, potentially additional millions of people.&nbsp; The soldiers are being just wiped out on both sides.&nbsp; Wiped out.&nbsp; It&#8217;s horrible.&nbsp;</p>
+
+
+
+<p>You know, the weaponry today is so powerful, so, you know, strong that it’s killing a lot of soldiers.&nbsp; And I don&#8217;t want to sol- &#8212; they&#8217;re Russian and they’re Ukrainian.&nbsp; I don&#8217;t want to see those soldiers killed.&nbsp; They have mothers and fathers.&nbsp; They have sisters and brothers.&nbsp; I don&#8217;t want to see them killed.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Mr. President, on tariffs, you mentioned lumber.&nbsp; That&#8217;s something that I don&#8217;t believe we&#8217;ve heard before.&nbsp; Any specific &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Lumber, yeah.&nbsp; Forest &#8212; forest product, yeah.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; And do you have a rate in mind for that?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, but we’re thinking about maybe 25 percent.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; And would that also be April 2nd?&nbsp; On or before April 2nd?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; In that vicinity, yeah.&nbsp; A little bit later.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; And also, which car companies did you &#8212; you said that you spoke with some car companies.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I spoke to all car companies.&nbsp; Everybody is coming back into America.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; So, these are foreign car companies?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Including foreign companies, yeah.&nbsp; They&#8217;re going to be coming in, because they don&#8217;t want to pay the tariffs.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; You said you’ll be having lunch with some Democrats next week.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Can you elaborate on who that is and what you all plan to discuss?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Well, you’ll see when I do it, but some good ones.</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; Are you &#8212;</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; THE PRESIDENT:&nbsp; Some biggies.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Are you con- &#8212; are you concerned about congressional funding?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, I’m just &#8212;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Is that on the table?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I think we&#8217;re going to just talk.&nbsp;</p>
+
+
+
+<p>I think it would be great if Republicans and Democrats could get along.&nbsp; It&#8217;s time.&nbsp; It&#8217;s time.&nbsp; It makes sense.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, would you say you trust the Russians to negotiate in good faith going forward?&nbsp; Do you trust them?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I do.&nbsp; I think the Russians want to see the war end.&nbsp; And I do.&nbsp; I really do.&nbsp; But I think they have the cards a little bit, because, you know, they&#8217;re &#8212; they&#8217;ve taken a lot of territory, so they have the cards.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Mr. President, have you set a date for the British prime minister&#8217;s visit to Washington?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No.&nbsp; He&#8217;ll be coming soon, though.&nbsp; He has asked to come and see me.&nbsp; So, he’ll be coming.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; What about Macron?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; And president of France also.&nbsp; Macron will be coming.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; But no set dates yet?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Very soon.&nbsp; Maybe Monday.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Mr. President, on congestion pricing.&nbsp; So &#8212; they&#8217;re going to be &#8212; it’s supposed to have saved about &#8212; or raised about $15 billion to help the MTA.&nbsp; Do you have an alternative way that &#8212; to fund the MTA system now that there won’t be cong- &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, that’s up to New York.&nbsp; They have to do that.&nbsp;</p>
+
+
+
+<p>Look, New York has treated a lot of people very badly.&nbsp; And it&#8217;s hard to &#8212; you know, it&#8217;s hard to feel sorry for what&#8217;s happened in New York.&nbsp; It&#8217;s sad to see the way they&#8217;ve treated people, and they continue to do it.&nbsp;</p>
+
+
+
+<p>And, you know, look at what&#8217;s going on with the mayor.&nbsp; Look at what&#8217;s going on with so many other things.&nbsp; So, congestion pricing is not a good situation, and they&#8217;re treating the people of New York very badly.&nbsp;</p>
+
+
+
+<p>That&#8217;s a &#8212; supposing you worked in a shoe shop or you worked in a restaurant as a waiter, and you have to come into Manhattan, and they&#8217;re taking, you know, many, many dollars out of your pocket.&nbsp; You can&#8217;t afford to do it.&nbsp;</p>
+
+
+
+<p>And price &#8212; you know, you &#8212; if you take a look, traffic will go down because people aren&#8217;t going to come.&nbsp; If people don&#8217;t come, that means the whole place is &#8212; it&#8217;s going to be a disaster.&nbsp;</p>
+
+
+
+<p>So, it could be, and it&#8217;s probably going to show that.&nbsp; Traffic will come down, but that means they&#8217;re not going to spend their money in New York.&nbsp; They&#8217;ll go someplace else.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; (Inaudible) prepared to go to court if lawsuits ensue?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Well, we&#8217;ll see what happens.&nbsp; You could give me the final, because I haven&#8217;t seen it as of late today because I was making a speech.&nbsp;</p>
+
+
+
+<p>Did I make a good speech?&nbsp; Yes.&nbsp;</p>
+
+
+
+<p>Okay.&nbsp; Go ahead.&nbsp; What else?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Can I ask you about the Chinese?&nbsp; So, you know, eventually, you would like to meet with President Xi.</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; But we heard &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I have very good relationship with President Xi.&nbsp; I think a great relationship with President Xi.&nbsp; But remember, he loves China, and I love the USA.&nbsp; So, you know, right there, there&#8217;s a little bit of competitiveness.&nbsp; But the relationship I have with President Xi is, I would say, a great one.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; We heard that you &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; It was obviously hurt by COVID coming in.&nbsp; It hurt them, hurt us, hurt everybody.&nbsp; Hurt the whole world.&nbsp; But outside of that, I have a very, very good relationship with President Xi.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Are you looking to make a new trade deal?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I think he&#8217;s &#8212; I think he&#8217;s &#8212; I think he&#8217;s a very unique person.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Would you make a new trade deal with China?&nbsp; I mean, you know, the &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah, it’s possible.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; One trade deal never really got &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; It&#8217;s possible.&nbsp;</p>
+
+
+
+<p>Well, we did a great trade deal with China.&nbsp; We did it &#8212; great for the farmers, great for manufacturers.&nbsp; They had to buy 50 billion dollars’ worth of our product, and we were making them buy it.&nbsp; The problem is that Biden didn&#8217;t push them to adhere to it.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, do you think D.C. should govern itself, or do you think that governing of District of Columbia should go back to Congress?&nbsp;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; I think that we should govern District of Columbia.&nbsp; It&#8217;s so important, the D.C. situation.&nbsp; I think that we should run it strong, run it with law and order, make it absolutely flawlessly beautiful.&nbsp;</p>
+
+
+
+<p>And I think we should take over Washington, D.C.&nbsp; Make it safe.&nbsp; People are getting killed.&nbsp; People are being hurt.&nbsp; You have great police department there, but, somehow, they&#8217;re not utilized properly.&nbsp;</p>
+
+
+
+<p>We should govern D.C.&nbsp; I think the federal government should take over the governance of D.C. and run it really, really properly.&nbsp;</p>
+
+
+
+<p>And I like the mayor.&nbsp; I get along great with the mayor, but they&#8217;re not doing the job.&nbsp; Too much crime.&nbsp; Too much graffiti.&nbsp; Too many tents on the lawns of these magnificent lawns, and there&#8217;s tents.&nbsp; And, you know, it&#8217;s a &#8212; it’s a sad thing.&nbsp; You know, homeless people all over the place, and we got to take care of the homeless.&nbsp; But you can&#8217;t have that in Washington, D.C.</p>
+
+
+
+<p>You know, when they come over to see me &#8212; like Macron is coming and the prime minister of UK is coming and all these people are coming over to see me &#8212; we&#8217;ll have, ultimately, President Xi, and we&#8217;ll have everybody coming, right?&nbsp; And you can&#8217;t let that be.&nbsp; You just can&#8217;t let that happen.&nbsp; You can&#8217;t have tents all over your beautiful &#8212; your once magnificent plazas and lawns and all of it.&nbsp; You just can&#8217;t do it.</p>
+
+
+
+<p>(Cross-talk.)</p>
+
+
+
+<p>MR. CHEUNG:&nbsp; We&#8217;ll do &#8212; we’ll do a couple more.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir, do you think you can still pay for extending your tax cuts without cutting both Medicaid and Medicare?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah, absolutely.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; House Republicans are planning to make cuts to Med- &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Well, I think we&#8217;re going to take in tremendous tariff money, number one.&nbsp; And number two, you take a look at DOGE, and you see what&#8217;s happening.&nbsp; We&#8217;re saving billions of dollars.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; On DOGE.&nbsp; Do you know what they&#8217;re looking at, specifically, at the Department of Defense right now?&nbsp; And &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Yeah, they’re looking at everything.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; And are they going to cut more national security &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; They’re looking &#8212; and we&#8217;re going to go into Fort Knox to make sure the gold is there.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Are they going to cut more &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; Do you know that?&nbsp; We&#8217;re going to go into Fort Knox.&nbsp; Do you know about that?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Sir &#8212; sir &#8212;</p>
+
+
+
+<p>(Air Force One experiences turbulence.)</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; That was a bad bump.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Are they going to eliminate more national security positions, civilians there at DOD?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; We’ll see what happens.</p>
+
+
+
+<p>But one of the things &#8212; we do want to look.&nbsp; I mean, we hope everything&#8217;s fine with Fort Knox, but we&#8217;re going to go to Fort Knox &#8212; the fabled Fort Knox &#8212; to make sure the gold is there.&nbsp;</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Where would the gold have gone?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; If the gold isn&#8217;t there, we&#8217;re going to be very upset.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Can you bring us along?</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; You haven’t brought up Greenland in a &#8212; in a while.&nbsp; Are you seeing &#8212;</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, no, very &#8212; we need Greenland from the standpoint of national security and international security.&nbsp; We have to do something with Greenland.&nbsp; We have to protect Greenland.&nbsp; But we need it for national security, and we need it, maybe more importantly, for international security.</p>
+
+
+
+<p>(Cross-talk.)</p>
+
+
+
+<p>MR. CHEUNG:&nbsp; All right, we&#8217;ll just do one more.&nbsp; One more.</p>
+
+
+
+<p>Q&nbsp;&nbsp;&nbsp; Can I just follow up?&nbsp; Are you seeing it as part of any of the discussions you&#8217;re having with Europeans and Putin in some sort of peace deal?</p>
+
+
+
+<p>THE PRESIDENT:&nbsp; No, no.&nbsp; We have to have Greenland because of the national security picture, even more so now than it would have been 20 years ago, 30 years ago, when they talked about it then too.&nbsp;</p>
+
+
+
+<p>You know, they used to talk about it.&nbsp; Years ago, they were talking about Greenland, but much more so now with, you know, modern weaponry, planes and the speed of planes, and all of the things.&nbsp; So, we have to have Greenland.&nbsp;</p>
+
+
+
+<p>Thank you very much.&nbsp;</p>
+
+
+
+<p class="has-text-align-center">END &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;9:14 P.M. EST</p>
+</div>
+</main>
+
+
+<footer class="alignfull site-footer wp-block-template-part">
+<div class="wp-block-whitehouse-footer">
+	<div class="wp-block-whitehouse-footer__inner-container">
+		<div class="wp-block-whitehouse-footer__content">
+			<div class="wp-block-whitehouse-footer__navigation">
+				<div class="wp-block-whitehouse-footer__navigation--inner-container">
+					<div class="wp-block-whitehouse-footer__menu">
+													<nav class="wp-block-whitehouse-footer__menu--footer">
+								<ul id="menu-footer-navigation-1" class="menu"><li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-43"><a href="https://www.whitehouse.gov/news/">News</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="https://www.whitehouse.gov/administration/">Administration</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://www.whitehouse.gov/issues/">Issues</a></li>
+<li id="menu-item-1064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1064"><a href="https://www.whitehouse.gov/contact/">Contact</a></li>
+<li id="menu-item-1270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="https://www.whitehouse.gov/visit/">Visit</a></li>
+</ul>							</nav>
+											</div>
+					<div class="wp-block-whitehouse-footer__logo">
+						<figure class="wp-block-whitehouse-footer__logo--figure">
+							<picture>
+								<source
+									type="image/webp"
+									srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/whitehouse-47-logo.webp"
+								/>
+								<img
+									class="wp-block-whitehouse-footer__logo--figure-asset"
+									src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/whitehouse-47-logo.png"
+									alt=""
+									width="254"
+									height="118"
+								/>
+							</picture>
+						</figure>
+					</div>
+					<div class="wp-block-whitehouse-footer__info">
+						<address>
+							<span>The White House</span>
+
+							1600 Pennsylvania Ave NW<br>
+							Washington, DC 20500						</address>
+
+						<div class="wp-block-whitehouse-footer__info--social-links">
+							
+
+<ul class="wp-block-social-links is-layout-flex wp-block-social-links-is-layout-flex">
+	<li class="wp-social-link wp-social-link-x  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://twitter.com/whitehouse" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+</svg><span class="wp-block-social-link-label screen-reader-text">X</span></a></li>
+
+	<li class="wp-social-link wp-social-link-instagram  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.instagram.com/whitehouse/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+</svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+
+	<li class="wp-social-link wp-social-link-facebook  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/WhiteHouse/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+</svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
+</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wp-block-whitehouse-footer__copyright">
+				<div class="wp-block-whitehouse-footer__copyright--inner-container">
+					<div class="wp-block-whitehouse-footer__copyright--logo">
+						<a href="https://www.whitehouse.gov" rel="home" title="The White House">
+							WH.GOV						</a>
+					</div>
+					<div class="wp-block-whitehouse-footer__copyright--menu">
+													<nav class="wp-block-whitehouse-footer__copyright--menu-nav">
+								<ul id="menu-copyright-navigation" class="menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://www.whitehouse.gov/copyright/">Copyright</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://www.whitehouse.gov/privacy/">Privacy</a></li>
+<li id="menu-item-5575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5575"><a href="https://www.whitehouse.gov/style-guide/">Style Guide</a></li>
+</ul>							</nav>
+											</div>
+					<div class="wp-block-whitehouse-footer__copyright--back-to-top">
+						<a href="#top" title="Back to top">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor" />
+</svg>							<span>Back to top</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+</div>
+<script type="application/json" id="wp-script-module-data-@wordpress/interactivity">
+{"config":{"whitehouse-header":{"menuOpenTitle":"Open menu","menuCloseTitle":"Close menu","menuOpenLabel":"Menu","menuCloseLabel":"Close","searchOpenTitle":"Open search","searchCloseTitle":"Close search","searchOpenLabel":"Search","searchCloseLabel":"Close","backLabel":"Back"}},"state":{"whitehouse-header":{"popoverOpen":false,"popoverTarget":null,"sticky":false}}}
+</script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerHTML = 'Skip to content';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+</script>
+<script id="wdgdc-gtm-analytics-pageData-js-extra">
+var pageData = {"postId":"1532","postType":"post","postDate":"2025-02-19","postTerms":["Categories: Remarks"]};
+</script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??/wp-content/plugins/gtm-analytics/assets/dist/js/PageData.js,/wp-content/client-mu-plugins/live/assets/js/live-check.js?m=1739571464j" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/wp-includes/js/dist/vendor/react-jsx-runtime.min.js?m=1739294329g" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??/wp-includes/js/dist/dom-ready.min.js,/wp-includes/js/dist/hooks.min.js?m=1739294330j" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://www.whitehouse.gov/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??/wp-includes/js/dist/vendor/wp-polyfill.min.js,/wp-includes/js/dist/url.min.js?m=1739294330j" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/api-fetch.min.js?ver=d387b816bc1ed2042e28" id="wp-api-fetch-js"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.whitehouse.gov/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "97436df14e" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://www.whitehouse.gov/wp-admin/admin-ajax.php?action=rest-nonce";
+</script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??-eJx9zEsOwjAMRdEN4QYIEuoAsRY3MaqD86F2VInVw4QhGd/zntsbcAnSI6lL6iKruUXqMmUuU9KD+wPCE5Q2RuE3GtcCkR7YxaDh9g3DOXarbSgitY0CGsUxq3nYSQM2gtWyjJ1QpmJDwwq6okjdgV4df4f3fDtd/XyeL94f0weIoXpZ" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/keycodes.min.js?ver=034ff647a54b018581d3" id="wp-keycodes-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??-eJx9zEsOQDAQANALqUElYiHOIjqLafSj0/G5PRs76f7lwRkV+XUTgwyWwRBniIlConyrXVCwduRryxX80TW4GLhs3u5YMqolEhdhQiOXSkEy+a+c3dQOeuzGXuvGPnk0P68=" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/data.min.js?ver=7c62e39de0308c73d50c" id="wp-data-js"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+</script>
+<script type="text/javascript" src="https://www.whitehouse.gov/wp-includes/js/dist/html-entities.min.js?m=1739294330g" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/rich-text.min.js?ver=4021b9e4e9ef4d3cd868" id="wp-rich-text-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??/wp-includes/js/dist/shortcode.min.js,/wp-includes/js/dist/warning.min.js?m=1739294330j" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/blocks.min.js?ver=8474af4b6260126fa879" id="wp-blocks-js"></script>
+<script src="https://www.whitehouse.gov/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1" id="moment-js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":0},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+</script>
+<script src="https://www.whitehouse.gov/wp-includes/js/dist/date.min.js?ver=aaca6387d1cf924acc51" id="wp-date-js"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":0},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":-5,"offsetFormatted":"-5","string":"America\/New_York","abbr":"EST"}} );
+</script>
+<script type="text/javascript" src="https://www.whitehouse.gov/wp-includes/js/dist/primitives.min.js?m=1739294330g" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/components.min.js?ver=fe486283a957ca5ed7c6" id="wp-components-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/wp-includes/js/dist/keyboard-shortcuts.min.js?m=1739294330g" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/commands.min.js?ver=33b90579e9a6d83ac03b" id="wp-commands-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??/wp-includes/js/dist/notices.min.js,/wp-includes/js/dist/preferences-persistence.min.js?m=1739294330j" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/preferences.min.js?ver=945c6cbfe821b3070047" id="wp-preferences-js"></script>
+<script id="wp-preferences-js-after">
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+</script>
+<script type="text/javascript" src="https://www.whitehouse.gov/_static/??-eJzTLy/QzcxLzilNSS3WzyrWT8ksLtEvLqnMSdVNzUvPzEvVy83M08sq1tHHprAkPzs1TzcHyMSrrDy/KCU5vzQPpso+19bQ3NjSyNLE2NggCwCE+C8X" ></script><script src="https://www.whitehouse.gov/wp-includes/js/dist/block-editor.min.js?ver=f231d517e98fd9d2c4e5" id="wp-block-editor-js"></script>
+<script type="text/javascript" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/js/main.js?m=1739301827g" ></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-478cab472aef3db5069","applicationID":"1352821653","transactionName":"NlNSYUUFWxYCUUxeWg8ZcVZDDVoLTEZdWkUNV0RQGgdUCxVTSw==","queueTime":0,"applicationTime":417,"atts":"GhRFFw0fSElBUxoNThxL","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
