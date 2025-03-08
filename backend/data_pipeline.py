@@ -10,14 +10,15 @@ congress_data = {}
 members_url = f"{BASE_URL}person"
 members_response = requests.get(members_url)
 members = members_response.json()['objects']
+
 # Step 2: Fetch voting records and sponsored bills
 for member in members:
     member_name = f"{member['firstname']} {member['lastname']}"
-    member_id = member['cspanid']
+    member_id = member['id']
 
     # Initialize member entry in dictionary
     congress_data[member_name] = {}
-    
+
     # Step 3: Fetch their voting records
     votes_url = f"{BASE_URL}vote_voter?person={member_id}"
     votes_response = requests.get(votes_url)
