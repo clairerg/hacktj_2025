@@ -1,5 +1,7 @@
 /* Aesthetic Political Speech Summary CSS */
-
+body {
+    background-color: red !important;
+}
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1a1a2e, #16213e, #6610f2);
