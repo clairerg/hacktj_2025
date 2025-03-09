@@ -56,19 +56,16 @@
     <button onclick="search()">Search</button>
     <div id="results"></div>
 
-    <label for="dropdown">Choose an item:</label>
-    <select id="dropdown" onchange="handleSelection()">
-        <option value="">--Select--</option>
-        <option value="Healthcare">Healthcare</option>
-        <option value="Policy">Policy</option>
-        <option value="Gun Control">Gun Control</option>
-    </select>
+	<h3>Select Key Issues of Interest</h3>
+    <input type="checkbox" id="I1" name="I1" value="CC">
+	<label for="I1">Climate Change</label><br>
+	<input type="checkbox" id="I2" name="I3" value="HC">
+	<label for="I2">Healthcare</label><br>
+	<input type="checkbox" id="I3" name="I3" value="GC">
+	<label for="I3">Gun Control</label><br>
 
     <!-- Checkbox options will be dynamically inserted here -->
     <div id="checkboxOptions"></div>
-
-    <!-- Multiple choice dropdown for importance will be inserted here -->
-    <div id="importanceOptions"></div>
 
     <br><button onclick="search()">Submit</button>
 
@@ -131,25 +128,6 @@
 
                 </section>
 
-            <!-- CTA -->
-                <section id="cta">
-
-                    <h2>Sign up for beta access</h2>
-                    <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-                    <form>
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-8 col-12-mobilep">
-                                <input type="email" name="email" id="email" placeholder="Email Address" />
-                            </div>
-                            <div class="col-4 col-12-mobilep">
-                                <input type="submit" value="Sign Up" class="fit" />
-                            </div>
-                        </div>
-                    </form>
-
-                </section>
-
             <!-- Footer -->
                 <footer id="footer">
                     <ul class="icons">
@@ -182,28 +160,8 @@
             });
         }
     </script>
-	<script>
-        // This function runs when you change the dropdown selection
-        function handleSelection() {
-            let selectedItem = document.getElementById("dropdown").value;
-            let checkboxDiv = document.getElementById("checkboxOptions");
-            let importanceDiv = document.getElementById("importanceOptions");
-
-            // Clear any previous checkboxes and multiple choice dropdown
-            checkboxDiv.innerHTML = "";
-            importanceDiv.innerHTML = "";
-
-       
-                importanceDiv.innerHTML = `
-                    <p>Select Opinion:</p>
-                    <select id="importance">
-                        <option value="Pro">Pro</option>
-                        <option value="Con">Con</option>
-                        <option value="No Opinion">No Opinion</option>
-                    </select>
-                `;
-            }
-        
+         
+        <script>
 
         // This function handles the search based on the selected dropdown item and checkbox values
         async function search() {
