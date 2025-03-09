@@ -1,34 +1,6 @@
 import os
 from transformers import pipeline
 import yake
-import sqlite3
-
-def get_bills(biocode_id, db_path="congress_data.db"):
-    bills = []
-    
-    try:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        query = """
-        SELECT title, policy_area
-        FROM bills
-        WHERE member_id = ?;
-        """
-        
-        cursor.execute(query, (biocode_id,))
-        bills = cursor.fetchall()
-
-        conn.close()
-    except sqlite3.Error as e:
-        print(f"Database error: {e}")
-    
-    return bills
-
-biocode_id = "M001242"
-bills_list = get_bills(biocode_id)
-print(bills_list)
-
 
 os.makedirs("summaries", exist_ok=True)
 
