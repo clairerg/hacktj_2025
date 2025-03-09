@@ -67,6 +67,11 @@
     <!-- Checkbox options will be dynamically inserted here -->
     <div id="checkboxOptions"></div>
 
+    <!-- Multiple choice dropdown for importance will be inserted here -->
+    <div id="importanceOptions"></div>
+
+    <br><button onclick="search()">Submit</button>
+
     <!-- Search results will be displayed here -->
     <div id="results"></div>
             
@@ -178,44 +183,46 @@
         }
     </script>
 	<script>
+        // This function runs when you change the dropdown selection
         function handleSelection() {
             let selectedItem = document.getElementById("dropdown").value;
             let checkboxDiv = document.getElementById("checkboxOptions");
+            let importanceDiv = document.getElementById("importanceOptions");
 
-            // Clear previous checkboxes
+            // Clear any previous checkboxes and multiple choice dropdown
             checkboxDiv.innerHTML = "";
+            importanceDiv.innerHTML = "";
 
-            if (selectedItem) {
-                checkboxDiv.innerHTML = `
-                    <p>Select Stance (Multiple Allowed):</p>
-                    <label><input type="checkbox" name="stance" value="pro"> Pro</label>
-                    <label><input type="checkbox" name="stance" value="con"> Con</label>
-                    <label><input type="checkbox" name="stance" value="noopinion"> No Opinion</label>
-                    <br><button onclick="search()">Submit</button>
+       
+                importanceDiv.innerHTML = `
+                    <p>Select Opinion:</p>
+                    <select id="importance">
+                        <option value="Pro">Pro</option>
+                        <option value="Con">Con</option>
+                        <option value="No Opinion">No Opinion</option>
+                    </select>
                 `;
             }
-        }
+        
 
+        // This function handles the search based on the selected dropdown item and checkbox values
         async function search() {
             let selectedItem = document.getElementById("dropdown").value;
             let checkedBoxes = document.querySelectorAll('input[name="stance"]:checked');
+            let importance = document.getElementById("importance").value;
 
-            if (checkedBoxes.length === 0) {
-                alert("Please select at least one stance (Pro, Con, or No Opinion).");
-                return;
-            }
-
-            // Get selected values as a comma-separated string
+ 
+            // Get selected values as a comma-separated string for stances
             let selectedStances = Array.from(checkedBoxes).map(cb => cb.value).join(",");
 
-            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}`);
+            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}&importance=${importance}`);
             let results = await response.json();
 
             let resultDiv = document.getElementById("results");
-            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}):</h3>`;
+            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}, Importance: ${importance}):</h3>`;
             results.forEach(item => {
                 resultDiv.innerHTML += `<p>${item.name} - ${item.stance}</p>`;
-            });
+            })
         }
     </script>
 	
