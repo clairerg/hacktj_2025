@@ -3167,6 +3167,8 @@
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
+		font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-weight: 1200;
 		color: whitesmoke;
 		padding: 12em 0 20em 0;
 		text-align: center;
@@ -3177,7 +3179,7 @@
 		}
 
 		#banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: black;
+			color: white;
 		}
 
 		#banner h2 {
