@@ -4,8 +4,7 @@ body {
 }
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #6610f2);
-    color: #ffffff;
+    background-color: lightblue;
     margin: 0;
     padding: 0;
 }
