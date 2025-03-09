@@ -17,64 +17,64 @@ def split_text(text, max_tokens=900):
     return chunks
 
 # for i in range(1, 11):
-input_file = f"clean_speeches/clean_speech_{1}.txt"
-output_file = f"summaries/summary_{1}.txt"
-output_file2 = f"summaries/keywords_{1}.txt"
-# try:
-#     with open(input_file, "r", encoding="utf-8") as file:
-#         cleaned_text = file.read()
-#     text_chunks = split_text(cleaned_text)
+input_file = f"clean_speeches/clean_speech_{6}.txt"
+output_file = f"summaries/summary_{6}.txt"
+output_file2 = f"summaries/keywords_{6}.txt"
+try:
+    with open(input_file, "r", encoding="utf-8") as file:
+        cleaned_text = file.read()
+    text_chunks = split_text(cleaned_text)
 
-#     chunk_summaries = [
-#         summarizer(chunk, max_length=150, min_length=50, do_sample=False)[0]["summary_text"]
-#         for chunk in text_chunks
-#     ]
+    chunk_summaries = [
+        summarizer(chunk, max_length=150, min_length=50, do_sample=False)[0]["summary_text"]
+        for chunk in text_chunks
+    ]
 
-#     final_summary = " ".join(chunk_summaries)
+    final_summary = " ".join(chunk_summaries)
 
-#     exceptions = {"Mr.", "U.S.", "D.C."} 
-#     words = final_summary.split(" ") 
-#     formatted_summary = []
+    exceptions = {"Mr.", "U.S.", "D.C."} 
+    words = final_summary.split(" ") 
+    formatted_summary = []
 
-#     for i in range(len(words)):
-#       formatted_summary.append(words[i])
-#       if words[i].endswith(".") and words[i] not in exceptions:
-#           formatted_summary.append("\n")
+    for i in range(len(words)):
+      formatted_summary.append(words[i])
+      if words[i].endswith(".") and words[i] not in exceptions:
+          formatted_summary.append("\n")
 
-#     formatted_summary = " ".join(formatted_summary)
+    formatted_summary = " ".join(formatted_summary)
 
-#     with open(output_file, "w", encoding="utf-8") as file:
-#         file.write(formatted_summary)
+    with open(output_file, "w", encoding="utf-8") as file:
+        file.write(formatted_summary)
 
-#     print(f"Summary saved as '{output_file}'.")
+    print(f"Summary saved as '{output_file}'.")
 
-#     kw_extractor = yake.KeywordExtractor()
-#     keywords = kw_extractor.extract_keywords(cleaned_text)
+    # kw_extractor = yake.KeywordExtractor()
+    # keywords = kw_extractor.extract_keywords(cleaned_text)
 
-#     # Format keywords into a readable format
-#     formatted_keywords = "\n".join([f"{kw[0]} ({kw[1]:.4f})" for kw in keywords])
+    # # Format keywords into a readable format
+    # formatted_keywords = "\n".join([f"{kw[0]} ({kw[1]:.4f})" for kw in keywords])
 
-#     with open(output_file2, "w", encoding="utf-8") as file:
-#             file.write(formatted_keywords)
+    # with open(output_file2, "w", encoding="utf-8") as file:
+    #         file.write(formatted_keywords)
 
-#     print(f"Keywords saved as '{output_file}'.")
+    # print(f"Keywords saved as '{output_file}'.")
     
 
-# except FileNotFoundError:
-#     print(f"Warning: {input_file} not found, skipping.")
+except FileNotFoundError:
+    print(f"Warning: {input_file} not found, skipping.")
 
-# print("All speeches summarized and saved.")
+print("All speeches summarized and saved.")
 
-with open(input_file, "r", encoding="utf-8") as file:
-  cleaned_text = file.read()
+# with open(input_file, "r", encoding="utf-8") as file:
+#   cleaned_text = file.read()
 
-kw_extractor = yake.KeywordExtractor()
-keywords = kw_extractor.extract_keywords(cleaned_text)
+# kw_extractor = yake.KeywordExtractor()
+# keywords = kw_extractor.extract_keywords(cleaned_text)
 
-formatted_keywords = "\n".join([f"{kw[0]} ({kw[1]:.4f})" for kw in keywords])
+# formatted_keywords = "\n".join([f"{kw[0]} ({kw[1]:.4f})" for kw in keywords])
 
-with open(output_file2, "w", encoding="utf-8") as file:
-  file.write(formatted_keywords)
+# with open(output_file2, "w", encoding="utf-8") as file:
+#   file.write(formatted_keywords)
 
-print(f"Keywords saved as '{output_file}'.")
+# print(f"Keywords saved as '{output_file}'.")
  
