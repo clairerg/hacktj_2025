@@ -85,8 +85,10 @@ def save_to_database(member_id, sponsored_bills, cosponsored_bills):
 
 def generate_summary():
     members = get_members()
-    for member_id in members[:1]:  # Limit to first 5 members for testing
-        print(member_id)
+    count = 0
+    for member_id in members:  # Limit to first 5 members for testing
+        print(count)
+        count += 1
         sponsored = get_bills(member_id, "sponsored")
         cosponsored = get_bills(member_id, "cosponsored")
         
