@@ -24,8 +24,7 @@ def search():
     conn.close()
 
     if any(r['name'] == 'Donald Trump' for r in results) == False:
-      results.append({'name': 'Donald Trump', 'position': 'Former President', 'party': 'Republican'})
-    
+        results.append({'name': 'Donald Trump', 'position': 'Former President', 'party': 'Republican'})
     return results
 
 @app.route('/reverse_search', methods=['GET'])

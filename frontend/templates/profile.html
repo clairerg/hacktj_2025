@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ candidate.name }}'s Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ candidate.name }}</h1>
+        <h2>{{ candidate.position }} - {{ candidate.party }}</h2>
+
+        <h3>Speeches</h3>
+        {% for speech in speeches %}
+        <div class="speech">
+            <p><strong>Summary:</strong> {{ speech.summary }}</p>
+            <p><strong>Keywords:</strong> {{ ", ".join(speech.keywords) }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

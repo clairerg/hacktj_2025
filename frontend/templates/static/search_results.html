@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for candidate in results %}
+        <li><a href="{{ url_for('profile', name=candidate.name) }}">{{ candidate.name }}</a> - {{ candidate.position }} ({{ candidate.party }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
