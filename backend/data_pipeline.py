@@ -115,7 +115,7 @@ def save_to_database(member_id, name, top_policies, total_sponsored, total_cospo
 # Generate summary
 def generate_summary():
     members = get_members()
-    for member_id, name in members[:5] + members[-2:]: 
+    for member_id, name in members[:5] + members[-3:]: 
         sponsored = get_bills(member_id, "sponsored")
         cosponsored = get_bills(member_id, "cosponsored")
         policy_count = defaultdict(int)
