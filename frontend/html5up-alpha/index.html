@@ -56,16 +56,18 @@
     <button onclick="search()">Search</button>
     <div id="results"></div>
 
-    <label for="dropdown">Choose an item:</label>
-    <select id="dropdown" onchange="handleSelection()">
-        <option value="">--Select--</option>
-        <option value="Healthcare">Healthcare</option>
-        <option value="Policy">Policy</option>
-        <option value="Gun Control">Gun Control</option>
-    </select>
+	<h3>Select Key Issues of Interest</h3>
+    <input type="checkbox" id="I1" name="I1" value="CC">
+	<label for="I1">Climate Change</label><br>
+	<input type="checkbox" id="I2" name="I3" value="HC">
+	<label for="I2">Healthcare</label><br>
+	<input type="checkbox" id="I3" name="I3" value="GC">
+	<label for="I3">Gun Control</label><br>
 
     <!-- Checkbox options will be dynamically inserted here -->
     <div id="checkboxOptions"></div>
+
+    <br><button onclick="search()">Submit</button>
 
     <!-- Search results will be displayed here -->
     <div id="results"></div>
@@ -126,25 +128,6 @@
 
                 </section>
 
-            <!-- CTA -->
-                <section id="cta">
-
-                    <h2>Sign up for beta access</h2>
-                    <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-                    <form>
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-8 col-12-mobilep">
-                                <input type="email" name="email" id="email" placeholder="Email Address" />
-                            </div>
-                            <div class="col-4 col-12-mobilep">
-                                <input type="submit" value="Sign Up" class="fit" />
-                            </div>
-                        </div>
-                    </form>
-
-                </section>
-
             <!-- Footer -->
                 <footer id="footer">
                     <ul class="icons">
@@ -177,45 +160,27 @@
             });
         }
     </script>
-	<script>
-        function handleSelection() {
-            let selectedItem = document.getElementById("dropdown").value;
-            let checkboxDiv = document.getElementById("checkboxOptions");
+         
+        <script>
 
-            // Clear previous checkboxes
-            checkboxDiv.innerHTML = "";
-
-            if (selectedItem) {
-                checkboxDiv.innerHTML = `
-                    <p>Select Stance (Multiple Allowed):</p>
-                    <label><input type="checkbox" name="stance" value="pro"> Pro</label>
-                    <label><input type="checkbox" name="stance" value="con"> Con</label>
-                    <label><input type="checkbox" name="stance" value="noopinion"> No Opinion</label>
-                    <br><button onclick="search()">Submit</button>
-                `;
-            }
-        }
-
+        // This function handles the search based on the selected dropdown item and checkbox values
         async function search() {
             let selectedItem = document.getElementById("dropdown").value;
             let checkedBoxes = document.querySelectorAll('input[name="stance"]:checked');
+            let importance = document.getElementById("importance").value;
 
-            if (checkedBoxes.length === 0) {
-                alert("Please select at least one stance (Pro, Con, or No Opinion).");
-                return;
-            }
-
-            // Get selected values as a comma-separated string
+ 
+            // Get selected values as a comma-separated string for stances
             let selectedStances = Array.from(checkedBoxes).map(cb => cb.value).join(",");
 
-            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}`);
+            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}&importance=${importance}`);
             let results = await response.json();
 
             let resultDiv = document.getElementById("results");
-            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}):</h3>`;
+            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}, Importance: ${importance}):</h3>`;
             results.forEach(item => {
                 resultDiv.innerHTML += `<p>${item.name} - ${item.stance}</p>`;
-            });
+            })
         }
     </script>
 	

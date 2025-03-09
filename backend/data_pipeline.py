@@ -13,15 +13,24 @@ def setup_database():
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS members (
             id TEXT PRIMARY KEY,
-            sponsored_bills TEXT,
-            cosponsored_bills TEXT,
+            top_policies TEXT,
             total_bills_sponsored INTEGER,
             total_bills_cosponsored INTEGER
+        )
+    ''')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS bills (
+            member_id TEXT,
+            bill_type TEXT,
+            title TEXT,
+            policy_area TEXT,
+            FOREIGN KEY (member_id) REFERENCES members (id)
         )
     ''')
     conn.commit()
     conn.close()
 
+# Get members
 def get_members():
     members = []
     offset = 0
@@ -45,9 +54,9 @@ def get_members():
         offset += limit  # Move to the next page
     
     members = sorted(members, key=lambda x: x[1], reverse=True)  # Sort by start year (most recent first)
-    print(members)
     return [member[0] for member in members]
 
+# Get bills
 def get_bills(member_id, bill_type):
     bills = []
     offset = 0
@@ -57,8 +66,13 @@ def get_bills(member_id, bill_type):
         url = f"{BASE_URL}/member/{member_id}/{bill_type}-legislation?api_key={API_KEY}&format=json&offset={offset}&limit={limit}"
         response = requests.get(url)
         data = response.json()
-        
-        page_bills = [bill.get("title", "Unknown Title") for bill in data.get("bills", [])]
+        if len(data.keys()) == 3: data = data[bill_type + "Legislation"]
+        else: return []
+        page_bills = []
+        for bill in data:
+            title = bill.get("title", "Unknown Title")
+            policy = bill.get("policyArea", {}).get("name", "Unknown Policy")
+            if policy != None: page_bills.append((title, policy))
         
         if not page_bills:
             break  # Stop if no more bills are found
@@ -68,30 +82,51 @@ def get_bills(member_id, bill_type):
     
     return bills
 
-def save_to_database(member_id, sponsored_bills, cosponsored_bills):
+# Save data to database
+def save_to_database(member_id, top_policies, total_sponsored, total_cosponsored, sponsored, cosponsored):
     conn = sqlite3.connect("congress_data.db")
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT INTO members (id, sponsored_bills, cosponsored_bills, total_bills_sponsored, total_bills_cosponsored)
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO members (id, top_policies, total_bills_sponsored, total_bills_cosponsored)
+        VALUES (?, ?, ?, ?)
         ON CONFLICT(id) DO UPDATE SET
-            sponsored_bills = excluded.sponsored_bills,
-            cosponsored_bills = excluded.cosponsored_bills,
+            top_policies = excluded.top_policies,
             total_bills_sponsored = excluded.total_bills_sponsored,
             total_bills_cosponsored = excluded.total_bills_cosponsored
-    ''', (member_id, ", ".join(sponsored_bills), ", ".join(cosponsored_bills), len(sponsored_bills), len(cosponsored_bills)))
+    ''', (member_id, ", ".join(top_policies), total_sponsored, total_cosponsored))
+    
+    for title, policy in sponsored:
+        cursor.execute('''
+            INSERT INTO bills (member_id, bill_type, title, policy_area)
+            VALUES (?, ?, ?, ?)
+        ''', (member_id, "sponsored", title, policy))
+    
+    for title, policy in cosponsored:
+        cursor.execute('''
+            INSERT INTO bills (member_id, bill_type, title, policy_area)
+            VALUES (?, ?, ?, ?)
+        ''', (member_id, "cosponsored", title, policy))
+    
     conn.commit()
     conn.close()
 
+# Generate summary
 def generate_summary():
     members = get_members()
-    for member_id in members[:1]:  # Limit to first 5 members for testing
-        print(member_id)
+    for member_id in members[:5] + members[-5:]: 
         sponsored = get_bills(member_id, "sponsored")
         cosponsored = get_bills(member_id, "cosponsored")
+        policy_count = defaultdict(int)
+        for _, policy in sponsored + cosponsored:
+            policy_count[policy] += 1
+        top_policies = sorted(policy_count.items(), key=lambda x: x[1], reverse=True)[:3]
+        print(top_policies)
         
         save_to_database(
             member_id,
+            [policy.strip() for policy, _ in top_policies],
+            len(sponsored),
+            len(cosponsored),
             sponsored,
             cosponsored
         )
