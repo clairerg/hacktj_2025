@@ -37,8 +37,6 @@ def get_members():
         for member in data.get("members", []):
             bioguide_id = member["bioguideId"]
             start_date = int(member["terms"]["item"][0]["startYear"])
-            if "endYear" in member["terms"]["item"][0].keys(): end_date = int(member["terms"]["item"][0]["endYear"])
-            else: end_date = -1
             page_members.append((bioguide_id, start_date))
         
         if not page_members:
