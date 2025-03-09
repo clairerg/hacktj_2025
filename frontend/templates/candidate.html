@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>{{ candidate.name }} - Political Integrity</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="static/assets/css/main.css" />
+    </head>
+    <body>
+        <section id="main" class="container">
+            <section class="box special">
+                <h2>{{ candidate.name }}</h2>
+                <p>Top Priorities in Order: {{ candidate.top_policies }}</p>
+                <p>Total Bills Sponsored: {{ candidate.total_bills_sponsored }}</p>
+                <p>Total Bills Co-Sponsored: {{ candidate.total_bills_cosponsored }}</p>
+            </section>
+        </section>
+    </body>
+</html>
