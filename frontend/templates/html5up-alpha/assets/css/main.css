@@ -3163,7 +3163,7 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../../images/us-capitol-building-and-senate-chamber.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -3181,7 +3181,7 @@
 		}
 
 		#banner h2 {
-			font-size: 3.5em;
+			font-size: 3.5 em;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
