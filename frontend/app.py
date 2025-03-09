@@ -22,21 +22,18 @@ def search():
     cursor.execute("SELECT * FROM members WHERE name LIKE ?", (f"%{query}%",))
     results = [dict(r) for r in cursor.fetchall()]
     conn.close()
-    return results
+    return jsonify(results)
 
-@app.route('/reverse_search', methods=['GET'])
-def reverse_search():
-    policies = request.args.getlist('policies')
+@app.route('/candidate/<string:candidate_id>')
+def candidate_detail(candidate_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute(f"""
-        SELECT DISTINCT members.* FROM members
-        JOIN bills ON members.id = bills.member_id
-        WHERE bills.policy_area IN top_policies
-    """, policies)
-    results = cursor.fetchall()
+    cursor.execute("SELECT * FROM members WHERE id = ?", (candidate_id,))
+    candidate = cursor.fetchone()
     conn.close()
-    return render_template('reverse_search.html', results=results, policies=policies)
+    if candidate:
+        return render_template('candidate.html', candidate=dict(candidate))
+    return "Candidate not found", 404
 
 if __name__ == '__main__':
     app.run(debug=True)
