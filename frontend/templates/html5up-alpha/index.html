@@ -1,171 +1,210 @@
 <!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
-	<head>
-		<title>Alpha by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+    <head>
+        <title>PoliScope</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="landing is-preload">
+        <div id="page-wrapper">
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Layouts</a>
-								<ul>
-									<li><a href="generic.html">Generic</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
+            <!-- Header -->
+                <header id="header" class="alt">
+                    <h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a href="#" class="icon solid fa-angle-down">Layouts</a>
+                                <ul>
+                                    <li><a href="generic.html">Generic</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="elements.html">Elements</a></li>
+                                    
+                                </ul>
+                            </li>
+                            	
+                        </ul>
+                    </nav>
+                </header>
 
-			<!-- Banner -->
-				<section id="banner">
-					<h2>Alpha</h2>
-					<p>Another fine responsive site template freebie by HTML5 UP.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button primary">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>
-				</section>
+            <!-- MAIN BANNER -->
+                <section id="banner">
+                    <h2>Preserving Political Integrity</h2>
+                    <p>Created by Andrew Choi, Claire Guo, Kavya Kuttuva, and Alex Do</p>
+                  
+                </section>
 
-			<!-- Main -->
-				<section id="main" class="container">
-
-					<section class="box special">
-						<header class="major">
-							<h2>Modern Democracy
+            <!-- Main -->
+                <section id="main" class="container">
+                    <section class="box special">
+                        <header class="major">
+                            <h2>Introducing the ultimate tool for political engagement
+                            <br />
+                            Creating a more accessible future</h2>
+                            <p>We at PoliScope believe that the most important source 
+							<br /> 
+							of information comes from our leader themselves. Our goal is to provide 
 							<br />
-							Made Easy</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-						</header>
-						<span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
-					</section>
+							summaries and information about your politial leadership to better inform your political descions.
+							<br /> 
+							By choosing PoliScope we cut down the time you need to spend reading/listening to
+							<br />
+							political speeches in order to enable you to spend more time researching key stances that are 
+							<br />
+							important to you. We also provide reverse filtering to allow you to find candiates that 
+							<br />
+							support similar beliefs to you. 
+							</h2>
+                        </header>
+                        <span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
+                    </section> 
+                        <h1>Search for a political candidate's name to learn more about them and their political stances!</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">Search</button>
+    <div id="results"></div>
 
-					<section class="box special features">
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-bolt accent2"></span>
-								<h3>Magna etiam</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-chart-area accent3"></span>
-								<h3>Ipsum dolor</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-						</div>
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-cloud accent4"></span>
-								<h3>Sed feugiat</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-lock accent5"></span>
-								<h3>Enim phasellus</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-						</div>
-					</section>
+    <h1>Reverse Filtering Option</h1>
 
-					<div class="row">
-						<div class="col-6 col-12-narrower">
+    <label for="dropdown">Choose an item:</label>
+    <select id="dropdown" onchange="handleSelection()">
+        <option value="">--Select--</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Policy">Policy</option>
+        <option value="Gun Control">Gun Control</option>
+    </select>
 
-							<section class="box special">
-								<span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
-								<h3>Sed lorem adipiscing</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
+    <div id="checkboxOptions"></div>
+    <div id="results"></div>
+            
+                    <section class="box special features">
+                        <div class="features-row">
+                            <section>
+                                <span class="icon solid major fa-bolt accent2"></span>
+                                <h3>Magna etiam</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                            </section>
+                            <section>
+                                <span class="icon solid major fa-chart-area accent3"></span>
+                                <h3>Ipsum dolor</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                            </section>
+                        </div>
+                        <div class="features-row">
+                            <section>
+                                <span class="icon solid major fa-cloud accent4"></span>
+                                <h3>Sed feugiat</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                            </section>
+                            <section>
+                                <span class="icon solid major fa-lock accent5"></span>
+                                <h3>Enim phasellus</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                            </section>
+                        </div>
+                    </section>
 
-						</div>
-						<div class="col-6 col-12-narrower">
+                    <div class="row">
+                        <div class="col-6 col-12-narrower">
 
-							<section class="box special">
-								<span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
-								<h3>Accumsan integer</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
+                            <section class="box special">
+                                <span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+                                <h3>Sed lorem adipiscing</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                                <ul class="actions special">
+                                    <li><a href="#" class="button alt">Learn More</a></li>
+                                </ul>
+                            </section>
 
-						</div>
-					</div>
+                        </div>
+                        <div class="col-6 col-12-narrower">
 
-				</section>
+                            <section class="box special">
+                                <span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+                                <h3>Accumsan integer</h3>
+                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                                <ul class="actions special">
+                                    <li><a href="#" class="button alt">Learn More</a></li>
+                                </ul>
+                            </section>
 
-			<!-- CTA -->
-				<section id="cta">
+                        </div>
+                    </div>
 
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+                </section>
 
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
+            <!-- CTA -->
+               
 
-				</section>
+            <!-- Footer -->
+                
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+        </div>
 
-		</div>
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script>
+        async function search() {
+            let query = document.getElementById("searchInput").value;
+            let response = await fetch(`/search?q=${query}`);
+            let results = await response.json();
+            
+            let resultDiv = document.getElementById("results");
+            resultDiv.innerHTML = "";
+            results.forEach(item => {
+                resultDiv.innerHTML += `<p>${item.name}</p>`;
+            });
+        }
+    </script>
+    <script>
+        function handleSelection() {
+            let selectedItem = document.getElementById("dropdown").value;
+            let checkboxDiv = document.getElementById("checkboxOptions");
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            // Clear previous checkboxes
+            checkboxDiv.innerHTML = "";
 
-	</body>
+            if (selectedItem) {
+                checkboxDiv.innerHTML = `
+                    <p>Select Stance:</p>
+                    <label><input type="checkbox" name="stance" value="pro"> Pro</label>
+                    <label><input type="checkbox" name="stance" value="con"> Con</label>
+                    <label><input type="checkbox" name="stance" value="noopinion"> NoOpinion</label>
+                    <br><button onclick="search()">Submit</button>
+                `;
+            }
+        }
+
+        async function search() {
+            let selectedItem = document.getElementById("dropdown").value;
+            let checkedBoxes = document.querySelectorAll('input[name="stance"]:checked');
+
+            if (checkedBoxes.length === 0) {
+                alert("Please select at least one stance (Pro, Con, or NoOpinion).");
+                return;
+            }
+
+            // Get selected values as a comma-separated string
+            let selectedStances = Array.from(checkedBoxes).map(cb => cb.value).join(",");
+
+            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}`);
+            let results = await response.json();
+
+            let resultDiv = document.getElementById("results");
+            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}):</h3>`;
+            results.forEach(item => {
+                resultDiv.innerHTML += `<p>${item.name} - ${item.stance}</p>`;
+            });
+        }
+    </script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
