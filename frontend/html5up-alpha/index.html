@@ -51,12 +51,26 @@
 						</header>
 						<span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
 					</section> 
-					<div class="topnav">
-						<a class="active" href="#home">Home</a>
-						<a href="#about">About</a>
-						<a href="#contact">Contact</a>
-						<input type="text" placeholder="Search..">
-					  </div>
+						<h1>Search for a political candidate's name to learn more about them and their political stances!</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">Search</button>
+    <div id="results"></div>
+
+	<h1>Reverse Filtering Option</h1>
+
+    <label for="dropdown">Choose an item:</label>
+    <select id="dropdown" onchange="handleSelection()">
+        <option value="">--Select--</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Policy">Policy</option>
+        <option value="Gun Control">Gun Control</option>
+    </select>
+
+    <div id="checkboxOptions"></div>
+    <div id="results"></div>
+    <div id="checkboxOptions"></div>
+    <div id="results"></div>
+			
 					<section class="box special features">
 						<div class="features-row">
 							<section>
@@ -151,6 +165,60 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script>
+        async function search() {
+            let query = document.getElementById("searchInput").value;
+            let response = await fetch(`/search?q=${query}`);
+            let results = await response.json();
+            
+            let resultDiv = document.getElementById("results");
+            resultDiv.innerHTML = "";
+            results.forEach(item => {
+                resultDiv.innerHTML += `<p>${item.name}</p>`;
+            });
+        }
+    </script>
+	<script>
+        function handleSelection() {
+            let selectedItem = document.getElementById("dropdown").value;
+            let checkboxDiv = document.getElementById("checkboxOptions");
+
+            // Clear previous checkboxes
+            checkboxDiv.innerHTML = "";
+
+            if (selectedItem) {
+                checkboxDiv.innerHTML = `
+                    <p>Select Stance:</p>
+                    <label><input type="checkbox" name="stance" value="pro"> Pro</label>
+                    <label><input type="checkbox" name="stance" value="con"> Con</label>
+                    <label><input type="checkbox" name="stance" value="against"> Against</label>
+                    <br><button onclick="search()">Submit</button>
+                `;
+            }
+        }
+
+        async function search() {
+            let selectedItem = document.getElementById("dropdown").value;
+            let checkedBoxes = document.querySelectorAll('input[name="stance"]:checked');
+
+            if (checkedBoxes.length === 0) {
+                alert("Please select at least one stance (Pro, Con, or Against).");
+                return;
+            }
+
+            // Get selected values as a comma-separated string
+            let selectedStances = Array.from(checkedBoxes).map(cb => cb.value).join(",");
+
+            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}`);
+            let results = await response.json();
+
+            let resultDiv = document.getElementById("results");
+            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}):</h3>`;
+            results.forEach(item => {
+                resultDiv.innerHTML += `<p>${item.name} - ${item.stance}</p>`;
+            });
+        }
+    </script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
