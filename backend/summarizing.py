@@ -15,8 +15,8 @@ def split_text(text, max_tokens=900):
     return chunks
 
 # for i in range(1, 11):
-input_file = f"clean_speeches/clean_speech_{1}.txt"
-output_file = f"summaries/summary_{1}.txt"
+input_file = f"clean_speeches/clean_speech_{3}.txt"
+output_file = f"summaries/summary_{3}.txt"
 
 try:
     with open(input_file, "r", encoding="utf-8") as file:
@@ -30,9 +30,10 @@ try:
     ]
 
     final_summary = " ".join(chunk_summaries)
+    formatted_summary = final_summary.replace(". ", ".\n\n")
 
     with open(output_file, "w", encoding="utf-8") as file:
-        file.write(final_summary)
+        file.write(formatted_summary)
 
     print(f"Summary saved as '{output_file}'.")
 
