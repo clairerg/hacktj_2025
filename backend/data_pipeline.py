@@ -1,6 +1,5 @@
 import sqlite3
 import requests
-import xml.etree.ElementTree as ET
 from collections import defaultdict
 from textblob import TextBlob
 
@@ -30,18 +29,17 @@ def get_members():
     limit = 250  # Adjust based on API limits
     
     while True:
-        url = f"{BASE_URL}/member?api_key={API_KEY}&format=xml&offset={offset}&limit={limit}"
+        url = f"{BASE_URL}/member?api_key={API_KEY}&format=json&offset={offset}&limit={limit}&currentMember=TRUE"
         response = requests.get(url)
-        root = ET.fromstring(response.content)
-
+        data = response.json()
+        
         page_members = []
-        for member in root.findall(".//member"):
-            end_date = member.find("endDate").text if member.find("endDate") is not None else ""
-            start_date = member.find("startDate").text if member.find("startDate") is not None else ""
-            bioguide_id = member.find("bioguideId").text
-            
-            if end_date == "2025":
-                page_members.append((bioguide_id, start_date))
+        for member in data.get("members", []):
+            bioguide_id = member["bioguideId"]
+            start_date = int(member["terms"]["item"][0]["startYear"])
+            if "endYear" in member["terms"]["item"][0].keys(): end_date = int(member["terms"]["item"][0]["endYear"])
+            else: end_date = -1
+            page_members.append((bioguide_id, start_date))
         
         if not page_members:
             break  # Stop when no more members are found
@@ -50,6 +48,7 @@ def get_members():
         offset += limit  # Move to the next page
     
     members = sorted(members, key=lambda x: x[1], reverse=True)  # Sort by start year (most recent first)
+    print(members)
     return [member[0] for member in members]
 
 def get_bills(member_id, bill_type):
@@ -58,20 +57,17 @@ def get_bills(member_id, bill_type):
     limit = 250  # Adjust based on API rate limits
     
     while True:
-        url = f"{BASE_URL}/member/{member_id}/{bill_type}-legislation?api_key={API_KEY}&format=xml&offset={offset}&limit={limit}"
+        url = f"{BASE_URL}/member/{member_id}/{bill_type}-legislation?api_key={API_KEY}&format=json&offset={offset}&limit={limit}"
         response = requests.get(url)
-        root = ET.fromstring(response.content)
-
+        data = response.json()
+        
         page_bills = []
-        for bill in root.findall(".//item"):
-            title_element = bill.find("title")
-            policy_element = bill.find(".//policyArea/name")
-
-            title = title_element.text if title_element is not None else "Unknown Title"
-            policy = policy_element.text if policy_element is not None else "Unknown Policy"
-
+        for bill in data.get("bills", []):
+            title = bill.get("title", "Unknown Title")
+            policy = bill.get("policyArea", {}).get("name", "Unknown Policy")
+            
             page_bills.append((title, policy))
-
+        
         if not page_bills:
             break  # Stop if no more bills are found
 
