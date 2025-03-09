@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 import sqlite3
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def get_db_connection():
     conn = sqlite3.connect("congress_data.db")
@@ -18,9 +20,9 @@ def search():
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM members WHERE name LIKE ?", (f"%{query}%",))
-    results = cursor.fetchall()
+    results = [dict(r) for r in cursor.fetchall()]
     conn.close()
-    return render_template('direct_search.html', results=results, query=query)
+    return results
 
 @app.route('/reverse_search', methods=['GET'])
 def reverse_search():

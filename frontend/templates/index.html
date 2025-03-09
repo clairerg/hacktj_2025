@@ -1,269 +1,85 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
-        <title>Alpha by HTML5 UP</title>
+        <title>Political Integrity Search</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="static/assets/css/main.css" />
     </head>
     <body class="landing is-preload">
         <div id="page-wrapper">
-
             <!-- Header -->
-                <header id="header" class="alt">
-                    <h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>
-                                <a href="#" class="icon solid fa-angle-down">Layouts</a>
-                                <ul>
-                                    <li><a href="generic.html">Generic</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="elements.html">Elements</a></li>
-                                    
-                                </ul>
-                            </li>
-                            <li><a href="#" class="button">Sign Up</a></li>
-                        </ul>
-                    </nav>
-                </header>
-
-            <!-- MAIN BANNER -->
-                <section id="banner">
-                    <h2>Preserving Political Integrity</h2>
-                    <p>Created by Andrew Choi, Claire Guo, Kavya Kuttuva, and Alexander Do</p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button primary">Sign Up for Future Updates</a></li>
-                        <li><a href="#" class="button">Learn More</a></li>
+            <header id="header" class="alt">
+                <h1><a href="index.html">Political Integrity</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" class="button">Sign Up</a></li>
                     </ul>
+                </nav>
+            </header>
+
+            <!-- Main Banner -->
+            <section id="banner">
+                <h2>Preserving Political Integrity</h2>
+                <p>Created by Andrew Choi, Claire Guo, Kavya Kuttuva, and Alexander Do</p>
+                <ul class="actions special">
+                    <li><a href="#" class="button primary">Sign Up for Updates</a></li>
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </section>
+
+            <!-- Search Section -->
+            <section id="main" class="container">
+                <section class="box special">
+                    <header class="major">
+                        <h2>Find Political Candidates & Their Stances</h2>
+                        <p>Search for a candidate and explore their policies.</p>
+                    </header>
+                    <input type="text" id="searchInput" placeholder="Enter candidate's name...">
+                    <button onclick="search()" style="margin-bottom: 5px;">Search</button>
+                    <div id="results"></div>
                 </section>
 
-            <!-- Main -->
-                <section id="main" class="container">
-                    <section class="box special">
-                        <header class="major">
-                            <h2>Introducing the ultimate tool for political engagement
-                            <br />
-                            Creating a more accessible future</h2>
-                            <p>Interested in *insert text* </p>
-                        </header>
-                        <span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
-                    </section> 
-                        <h1>Search for a political candidate's name to learn more about them and their political stances!</h1>
-    <input type="text" id="searchInput" placeholder="Search...">
-    <button onclick="search()">Search</button>
-    <div id="results"></div>
-
-	<h3>Select Key Issues of Interest</h3>
-    <input type="checkbox" id="I1" name="I1" value="AF">
-	<label for="I1">Agriculture and Food</label><br>
-
-	<input type="checkbox" id="I2" name="I3" value="AM">
-	<label for="I2">Animals</label><br>
-
-	<input type="checkbox" id="I3" name="I3" value="AS">
-	<label for="I3">Armed Forces and National Security </label><br>
-
-    <input type="checkbox" id="I4" name="I4" value="ACR">
-	<label for="I4">Arts, Culture, Religion </label><br>
-
-    <input type="checkbox" id="I5" name="I5" value="CRL">
-	<label for="I5">Civil Rights and Liberties, Minority Issues </label><br>
-
-    <input type="checkbox" id="I6" name="I6" value="CM">
-	<label for="I6">Commerce </label><br>
-
-    <input type="checkbox" id="I7" name="I7" value="CG">
-    <label for="I7">Congress</label><br>
-
-    <input type="checkbox" id="I8" name="I8" value="CG">
-    <label for="I8">Crime and Law Enforcement</label><br>
-
-    <input type="checkbox" id="I9" name="I9" value="EPF">
-    <label for="I9">Economics and Public Finance </label><br>
-
-    <input type="checkbox" id="I10" name="I10" value="EDU">
-    <label for="I10">Education</label><br>
-
-    <input type="checkbox" id="I11" name="I11" value="EM">
-    <label for="I11">Emergency Mangement</label><br>
-
-    <input type="checkbox" id="I12" name="I12" value="ENE">
-    <label for="I12">Energy</label><br>
-
-    <input type="checkbox" id="I13" name="I13" value="EP">
-    <label for="I13">Environmental Protection</label><br>
-
-    <input type="checkbox" id="I14" name="I14" value="FAM">
-    <label for="I14">Families</label><br>
-
-    <input type="checkbox" id="I15" name="I15" value="FFS">
-    <label for="I15">Finance and Financial Sector</label><br>
-
-    <input type="checkbox" id="I16" name="I16" value="FTIF">
-    <label for="I16">Foreign Trade and International Finance</label><br>
-
-    <input type="checkbox" id="I17" name="I17" value="GOP">
-    <label for="I17">Government Operations and Politics</label><br>
-        
-    <input type="checkbox" id="I18" name="I18" value="HLTH">
-    <label for="I18">Health</label><br>
-        
-    <input type="checkbox" id="I19" name="I19" value="HOM">
-    <label for="I19">Housing and Urban Development</label><br>
-        
-    <input type="checkbox" id="I20" name="I20" value="INF">
-    <label for="I20">Infrastructure</label><br>
-        
-    <input type="checkbox" id="I21" name="I21" value="IT">
-    <label for="I21">Information Technology</label><br>
-        
-    <input type="checkbox" id="I22" name="I22" value="LAWS">
-    <label for="I22">Laws</label><br>
-        
-    <input type="checkbox" id="I23" name="I23" value="MIG">
-    <label for="I23">Migration</label><br>
-        
-    <input type="checkbox" id="I24" name="I24" value="PUBH">
-    <label for="I24">Public Health</label><br>
-        
-    <input type="checkbox" id="I25" name="I25" value="PUBP">
-    <label for="I25">Public Policy</label><br>
-        
-    <input type="checkbox" id="I26" name="I26" value="RD">
-    <label for="I26">Research and Development</label><br>
-        
-    <input type="checkbox" id="I27" name="I27" value="RES">
-    <label for="I27">Resource Management</label><br>
-        
-    <input type="checkbox" id="I28" name="I28" value="SOC">
-    <label for="I28">Social Services</label><br>
-        
-    <input type="checkbox" id="I29" name="I29" value="TRA">
-    <label for="I29">Transportation</label><br>
-        
-    <input type="checkbox" id="I30" name="I30" value="WRD">
-    <label for="I30">Water Resources Development</label><br>
-        
-
-
-    <!-- Checkbox options will be dynamically inserted here -->
-    <div id="checkboxOptions"></div>
-
-    <br><button onclick="search()">Submit</button>
-
-    <!-- Search results will be displayed here -->
-    <div id="results"></div>
-            
-                    <section class="box special features">
-                        <div class="features-row">
-                            <section>
-                                <span class="icon solid major fa-bolt accent2"></span>
-                                <h3>Magna etiam</h3>
-                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                            </section>
-                            <section>
-                                <span class="icon solid major fa-chart-area accent3"></span>
-                                <h3>Ipsum dolor</h3>
-                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                            </section>
-                        </div>
-                        <div class="features-row">
-                            
-
-                    <div class="row">
-                        <div class="col-6 col-12-narrower">
-
-                            <section class="box special">
-                                <span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-                                <h3>Sed lorem adipiscing</h3>
-                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                                <ul class="actions special">
-                                    <li><a href="#" class="button alt">Learn More</a></li>
-                                </ul>
-                            </section>
-
-                        </div>
-                        <div class="col-6 col-12-narrower">
-
-                            <section class="box special">
-                                <span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-                                <h3>Accumsan integer</h3>
-                                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                                <ul class="actions special">
-                                    <li><a href="#" class="button alt">Learn More</a></li>
-                                </ul>
-                            </section>
-
-                        </div>
+                <!-- Key Issues Selection -->
+                <section class="box special">
+                    <h3>Select Key Issues of Interest</h3>
+                    <div id="checkboxOptions">
+                        <input type="checkbox" id="I10" value="EDU"><label for="I10">Education</label><br>
+                        <input type="checkbox" id="I18" value="HLTH"><label for="I18">Health</label><br>
+                        <input type="checkbox" id="I24" value="PUBH"><label for="I24">Public Health</label><br>
+                        <input type="checkbox" id="I28" value="SOC"><label for="I28">Social Services</label><br>
                     </div>
-
+                    <button onclick="search()">Submit</button>
                 </section>
+            </section>
 
             <!-- Footer -->
-                <footer id="footer">
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                        <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-                        <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </footer>
-
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Political Integrity. All rights reserved.</li>
+                </ul>
+            </footer>
         </div>
 
         <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script>
-        async function search() {
-            let query = document.getElementById("searchInput").value;
-            let response = await fetch(`/search?q=${query}`);
-            let results = await response.json();
-            
-            let resultDiv = document.getElementById("results");
-            resultDiv.innerHTML = "";
-            results.forEach(item => {
-                resultDiv.innerHTML += `<p>${item.name}</p>`;
-            });
-        }
-    </script>
-         
         <script>
-
-        // This function handles the search based on the selected dropdown item and checkbox values
-        async function search() {
-            let selectedItem = document.getElementById("dropdown").value;
-            let checkedBoxes = document.querySelectorAll('input[name="stance"]:checked');
-            let importance = document.getElementById("importance").value;
-
- 
-            // Get selected values as a comma-separated string for stances
-            let selectedStances = Array.from(checkedBoxes).map(cb => cb.value).join(",");
-
-            let response = await fetch(`/search?item=${selectedItem}&stances=${selectedStances}&importance=${importance}`);
-            let results = await response.json();
-
-            let resultDiv = document.getElementById("results");
-            resultDiv.innerHTML = `<h3>Results for ${selectedItem} (${selectedStances}, Importance: ${importance}):</h3>`;
-            results.forEach(item => {
-                resultDiv.innerHTML += `<p>${item.name} - ${item.stance}</p>`;
-            })
-        }
-    </script>
-	
-            <script src="assets/js/jquery.dropotron.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-
+            async function search() {
+                let query = document.getElementById("searchInput").value;
+                let response = await fetch(`http://127.0.0.1:5000/search?q=${query}`);
+                let results = await response.json();
+                let resultDiv = document.getElementById("results");
+                resultDiv.innerHTML = "";
+                
+                results.forEach(item => {
+                    resultDiv.innerHTML += `<p><a href="${item.link}" target="_blank">${item.name}</a></p>`;
+                });
+            }
+        </script>
     </body>
 </html>
