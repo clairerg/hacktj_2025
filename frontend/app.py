@@ -17,7 +17,7 @@ def search():
     query = request.args.get('q', '').strip()
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM members WHERE id LIKE ?", (f"%{query}%",))
+    cursor.execute("SELECT * FROM members WHERE name LIKE ?", (f"%{query}%",))
     results = cursor.fetchall()
     conn.close()
     return render_template('direct_search.html', results=results, query=query)
@@ -27,11 +27,10 @@ def reverse_search():
     policies = request.args.getlist('policies')
     conn = get_db_connection()
     cursor = conn.cursor()
-    placeholders = ','.join('?' * len(policies))
     cursor.execute(f"""
         SELECT DISTINCT members.* FROM members
         JOIN bills ON members.id = bills.member_id
-        WHERE bills.policy_area IN ({placeholders})
+        WHERE bills.policy_area IN top_policies
     """, policies)
     results = cursor.fetchall()
     conn.close()
