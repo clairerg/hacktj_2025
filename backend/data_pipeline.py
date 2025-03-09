@@ -13,6 +13,7 @@ def setup_database():
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS members (
             id TEXT PRIMARY KEY,
+            name TEXT,
             top_policies TEXT,
             total_bills_sponsored INTEGER,
             total_bills_cosponsored INTEGER
@@ -45,7 +46,8 @@ def get_members():
         for member in data.get("members", []):
             bioguide_id = member["bioguideId"]
             start_date = int(member["terms"]["item"][0]["startYear"])
-            page_members.append((bioguide_id, start_date))
+            name = member["name"]
+            page_members.append((bioguide_id, name, start_date))
         
         if not page_members:
             break  # Stop when no more members are found
@@ -53,8 +55,8 @@ def get_members():
         members.extend(page_members)
         offset += limit  # Move to the next page
     
-    members = sorted(members, key=lambda x: x[1], reverse=True)  # Sort by start year (most recent first)
-    return [member[0] for member in members]
+    members = sorted(members, key=lambda x: x[2], reverse=True)  # Sort by start year (most recent first)
+    return [(member[0], member[1]) for member in members]
 
 # Get bills
 def get_bills(member_id, bill_type):
@@ -83,17 +85,17 @@ def get_bills(member_id, bill_type):
     return bills
 
 # Save data to database
-def save_to_database(member_id, top_policies, total_sponsored, total_cosponsored, sponsored, cosponsored):
+def save_to_database(member_id, name, top_policies, total_sponsored, total_cosponsored, sponsored, cosponsored):
     conn = sqlite3.connect("congress_data.db")
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT INTO members (id, top_policies, total_bills_sponsored, total_bills_cosponsored)
-        VALUES (?, ?, ?, ?)
+        INSERT INTO members (id, name, top_policies, total_bills_sponsored, total_bills_cosponsored)
+        VALUES (?, ?, ?, ?, ?)
         ON CONFLICT(id) DO UPDATE SET
             top_policies = excluded.top_policies,
             total_bills_sponsored = excluded.total_bills_sponsored,
             total_bills_cosponsored = excluded.total_bills_cosponsored
-    ''', (member_id, ", ".join(top_policies), total_sponsored, total_cosponsored))
+    ''', (member_id, name, ", ".join(top_policies), total_sponsored, total_cosponsored))
     
     for title, policy in sponsored:
         cursor.execute('''
@@ -113,7 +115,7 @@ def save_to_database(member_id, top_policies, total_sponsored, total_cosponsored
 # Generate summary
 def generate_summary():
     members = get_members()
-    for member_id in members[:5] + members[-5:]: 
+    for member_id, name in members[:5] + members[-2:]: 
         sponsored = get_bills(member_id, "sponsored")
         cosponsored = get_bills(member_id, "cosponsored")
         policy_count = defaultdict(int)
@@ -124,6 +126,7 @@ def generate_summary():
         
         save_to_database(
             member_id,
+            name,
             [policy.strip() for policy, _ in top_policies],
             len(sponsored),
             len(cosponsored),

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Alpha by HTML5 UP</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="landing is-preload">
+        <div id="page-wrapper">
+            <header id="header" class="alt">
+                <h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#" class="icon solid fa-angle-down">Layouts</a>
+                            <ul>
+                                <li><a href="generic.html">Generic</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="elements.html">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="button">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="banner">
+                <h2>Preserving Political Integrity</h2>
+                <p>Created by Andrew Choi, Claire Guo, Kavya Kuttuva, and Alexander Do</p>
+                <ul class="actions special">
+                    <li><a href="#" class="button primary">Sign Up for Future Updates</a></li>
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </section>
+            <section id="main" class="container">
+                <section class="box special">
+                    <header class="major">
+                        <h2>Introducing the ultimate tool for political engagement
+                        <br />
+                        Creating a more accessible future</h2>
+                        <p>Interested in learning about political candidates and their stances on key issues?</p>
+                    </header>
+                    <span class="image featured"><img src="images/us-capitol-building-and-senate-chamber.jpg" alt="" /></span>
+                </section>
+                <h1>Search for a political candidate's name to learn more about them and their political stances!</h1>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="search()">Search</button>
+                <div id="results"></div>
+                <label for="dropdown">Choose a policy category:</label>
+                <select id="dropdown" onchange="handleSelection()">
+                    <option value="">--Select--</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Education">Education</option>
+                    <option value="Economy">Economy</option>
+                    <option value="Gun Control">Gun Control</option>
+                    <option value="Foreign Policy">Foreign Policy</option>
+                </select>
+                <div id="checkboxOptions"></div>
+                <div id="importanceOptions"></div>
+                <br><button onclick="search()">Submit</button>
+                <div id="results"></div>
+            </section>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script>
+            async function search() {
+                let query = document.getElementById("searchInput").value;
+                let response = await fetch(`/search?q=${query}`);
+                let results = await response.json();
+                let resultDiv = document.getElementById("results");
+                resultDiv.innerHTML = "";
+                results.forEach(item => {
+                    resultDiv.innerHTML += `<p>${item.name}</p>`;
+                });
+            }
+        </script>
+        <script>
+            function handleSelection() {
+                let selectedItem = document.getElementById("dropdown").value;
+                let importanceDiv = document.getElementById("importanceOptions");
+                importanceDiv.innerHTML = `
+                    <p>Select Opinion:</p>
+                    <select id="importance">
+                        <option value="Pro">Pro</option>
+                        <option value="Con">Con</option>
+                        <option value="No Opinion">No Opinion</option>
+                    </select>
+                `;
+            }
+        </script>
+    </body>
+</html>
