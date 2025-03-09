@@ -47,17 +47,6 @@ try:
         file.write(formatted_summary)
 
     print(f"Summary saved as '{output_file}'.")
-
-    # kw_extractor = yake.KeywordExtractor()
-    # keywords = kw_extractor.extract_keywords(cleaned_text)
-
-    # # Format keywords into a readable format
-    # formatted_keywords = "\n".join([f"{kw[0]} ({kw[1]:.4f})" for kw in keywords])
-
-    # with open(output_file2, "w", encoding="utf-8") as file:
-    #         file.write(formatted_keywords)
-
-    # print(f"Keywords saved as '{output_file}'.")
     
 
 except FileNotFoundError:
